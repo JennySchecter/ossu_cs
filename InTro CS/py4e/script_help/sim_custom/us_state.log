@@ -1,0 +1,386 @@
+"list": [
+                            {
+                                "zone_id": 1,
+                                "zone_country_id": 223,
+                                "zone_code": "AL",
+                                "zone_name": "Alabama"
+                            },
+                            {
+                                "zone_id": 2,
+                                "zone_country_id": 223,
+                                "zone_code": "AK",
+                                "zone_name": "Alaska"
+                            },
+                            {
+                                "zone_id": 3,
+                                "zone_country_id": 223,
+                                "zone_code": "AS",
+                                "zone_name": "American Samoa"
+                            },
+                            {
+                                "zone_id": 4,
+                                "zone_country_id": 223,
+                                "zone_code": "AZ",
+                                "zone_name": "Arizona"
+                            },
+                            {
+                                "zone_id": 5,
+                                "zone_country_id": 223,
+                                "zone_code": "AR",
+                                "zone_name": "Arkansas"
+                            },
+                            {
+                                "zone_id": 6,
+                                "zone_country_id": 223,
+                                "zone_code": "AF",
+                                "zone_name": "Armed Forces Africa"
+                            },
+                            {
+                                "zone_id": 7,
+                                "zone_country_id": 223,
+                                "zone_code": "AA",
+                                "zone_name": "Armed Forces Americas"
+                            },
+                            {
+                                "zone_id": 8,
+                                "zone_country_id": 223,
+                                "zone_code": "AC",
+                                "zone_name": "Armed Forces Canada"
+                            },
+                            {
+                                "zone_id": 9,
+                                "zone_country_id": 223,
+                                "zone_code": "AE",
+                                "zone_name": "Armed Forces Europe"
+                            },
+                            {
+                                "zone_id": 10,
+                                "zone_country_id": 223,
+                                "zone_code": "AM",
+                                "zone_name": "Armed Forces Middle East"
+                            },
+                            {
+                                "zone_id": 11,
+                                "zone_country_id": 223,
+                                "zone_code": "AP",
+                                "zone_name": "Armed Forces Pacific"
+                            },
+                            {
+                                "zone_id": 12,
+                                "zone_country_id": 223,
+                                "zone_code": "CA",
+                                "zone_name": "California"
+                            },
+                            {
+                                "zone_id": 13,
+                                "zone_country_id": 223,
+                                "zone_code": "CO",
+                                "zone_name": "Colorado"
+                            },
+                            {
+                                "zone_id": 14,
+                                "zone_country_id": 223,
+                                "zone_code": "CT",
+                                "zone_name": "Connecticut"
+                            },
+                            {
+                                "zone_id": 15,
+                                "zone_country_id": 223,
+                                "zone_code": "DE",
+                                "zone_name": "Delaware"
+                            },
+                            {
+                                "zone_id": 16,
+                                "zone_country_id": 223,
+                                "zone_code": "DC",
+                                "zone_name": "District of Columbia"
+                            },
+                            {
+                                "zone_id": 17,
+                                "zone_country_id": 223,
+                                "zone_code": "FM",
+                                "zone_name": "Federated States Of Micronesia"
+                            },
+                            {
+                                "zone_id": 18,
+                                "zone_country_id": 223,
+                                "zone_code": "FL",
+                                "zone_name": "Florida"
+                            },
+                            {
+                                "zone_id": 19,
+                                "zone_country_id": 223,
+                                "zone_code": "GA",
+                                "zone_name": "Georgia"
+                            },
+                            {
+                                "zone_id": 20,
+                                "zone_country_id": 223,
+                                "zone_code": "GU",
+                                "zone_name": "Guam"
+                            },
+                            {
+                                "zone_id": 21,
+                                "zone_country_id": 223,
+                                "zone_code": "HI",
+                                "zone_name": "Hawaii"
+                            },
+                            {
+                                "zone_id": 22,
+                                "zone_country_id": 223,
+                                "zone_code": "ID",
+                                "zone_name": "Idaho"
+                            },
+                            {
+                                "zone_id": 23,
+                                "zone_country_id": 223,
+                                "zone_code": "IL",
+                                "zone_name": "Illinois"
+                            },
+                            {
+                                "zone_id": 24,
+                                "zone_country_id": 223,
+                                "zone_code": "IN",
+                                "zone_name": "Indiana"
+                            },
+                            {
+                                "zone_id": 25,
+                                "zone_country_id": 223,
+                                "zone_code": "IA",
+                                "zone_name": "Iowa"
+                            },
+                            {
+                                "zone_id": 26,
+                                "zone_country_id": 223,
+                                "zone_code": "KS",
+                                "zone_name": "Kansas"
+                            },
+                            {
+                                "zone_id": 27,
+                                "zone_country_id": 223,
+                                "zone_code": "KY",
+                                "zone_name": "Kentucky"
+                            },
+                            {
+                                "zone_id": 28,
+                                "zone_country_id": 223,
+                                "zone_code": "LA",
+                                "zone_name": "Louisiana"
+                            },
+                            {
+                                "zone_id": 29,
+                                "zone_country_id": 223,
+                                "zone_code": "ME",
+                                "zone_name": "Maine"
+                            },
+                            {
+                                "zone_id": 30,
+                                "zone_country_id": 223,
+                                "zone_code": "MH",
+                                "zone_name": "Marshall Islands"
+                            },
+                            {
+                                "zone_id": 31,
+                                "zone_country_id": 223,
+                                "zone_code": "MD",
+                                "zone_name": "Maryland"
+                            },
+                            {
+                                "zone_id": 32,
+                                "zone_country_id": 223,
+                                "zone_code": "MA",
+                                "zone_name": "Massachusetts"
+                            },
+                            {
+                                "zone_id": 33,
+                                "zone_country_id": 223,
+                                "zone_code": "MI",
+                                "zone_name": "Michigan"
+                            },
+                            {
+                                "zone_id": 34,
+                                "zone_country_id": 223,
+                                "zone_code": "MN",
+                                "zone_name": "Minnesota"
+                            },
+                            {
+                                "zone_id": 35,
+                                "zone_country_id": 223,
+                                "zone_code": "MS",
+                                "zone_name": "Mississippi"
+                            },
+                            {
+                                "zone_id": 36,
+                                "zone_country_id": 223,
+                                "zone_code": "MO",
+                                "zone_name": "Missouri"
+                            },
+                            {
+                                "zone_id": 37,
+                                "zone_country_id": 223,
+                                "zone_code": "MT",
+                                "zone_name": "Montana"
+                            },
+                            {
+                                "zone_id": 38,
+                                "zone_country_id": 223,
+                                "zone_code": "NE",
+                                "zone_name": "Nebraska"
+                            },
+                            {
+                                "zone_id": 39,
+                                "zone_country_id": 223,
+                                "zone_code": "NV",
+                                "zone_name": "Nevada"
+                            },
+                            {
+                                "zone_id": 40,
+                                "zone_country_id": 223,
+                                "zone_code": "NH",
+                                "zone_name": "New Hampshire"
+                            },
+                            {
+                                "zone_id": 41,
+                                "zone_country_id": 223,
+                                "zone_code": "NJ",
+                                "zone_name": "New Jersey"
+                            },
+                            {
+                                "zone_id": 42,
+                                "zone_country_id": 223,
+                                "zone_code": "NM",
+                                "zone_name": "New Mexico"
+                            },
+                            {
+                                "zone_id": 43,
+                                "zone_country_id": 223,
+                                "zone_code": "NY",
+                                "zone_name": "New York"
+                            },
+                            {
+                                "zone_id": 44,
+                                "zone_country_id": 223,
+                                "zone_code": "NC",
+                                "zone_name": "North Carolina"
+                            },
+                            {
+                                "zone_id": 45,
+                                "zone_country_id": 223,
+                                "zone_code": "ND",
+                                "zone_name": "North Dakota"
+                            },
+                            {
+                                "zone_id": 46,
+                                "zone_country_id": 223,
+                                "zone_code": "MP",
+                                "zone_name": "Northern Mariana Islands"
+                            },
+                            {
+                                "zone_id": 47,
+                                "zone_country_id": 223,
+                                "zone_code": "OH",
+                                "zone_name": "Ohio"
+                            },
+                            {
+                                "zone_id": 48,
+                                "zone_country_id": 223,
+                                "zone_code": "OK",
+                                "zone_name": "Oklahoma"
+                            },
+                            {
+                                "zone_id": 49,
+                                "zone_country_id": 223,
+                                "zone_code": "OR",
+                                "zone_name": "Oregon"
+                            },
+                            {
+                                "zone_id": 51,
+                                "zone_country_id": 223,
+                                "zone_code": "PA",
+                                "zone_name": "Pennsylvania"
+                            },
+                            {
+                                "zone_id": 52,
+                                "zone_country_id": 223,
+                                "zone_code": "PR",
+                                "zone_name": "Puerto Rico"
+                            },
+                            {
+                                "zone_id": 53,
+                                "zone_country_id": 223,
+                                "zone_code": "RI",
+                                "zone_name": "Rhode Island"
+                            },
+                            {
+                                "zone_id": 54,
+                                "zone_country_id": 223,
+                                "zone_code": "SC",
+                                "zone_name": "South Carolina"
+                            },
+                            {
+                                "zone_id": 55,
+                                "zone_country_id": 223,
+                                "zone_code": "SD",
+                                "zone_name": "South Dakota"
+                            },
+                            {
+                                "zone_id": 56,
+                                "zone_country_id": 223,
+                                "zone_code": "TN",
+                                "zone_name": "Tennessee"
+                            },
+                            {
+                                "zone_id": 57,
+                                "zone_country_id": 223,
+                                "zone_code": "TX",
+                                "zone_name": "Texas"
+                            },
+                            {
+                                "zone_id": 58,
+                                "zone_country_id": 223,
+                                "zone_code": "UT",
+                                "zone_name": "Utah"
+                            },
+                            {
+                                "zone_id": 59,
+                                "zone_country_id": 223,
+                                "zone_code": "VT",
+                                "zone_name": "Vermont"
+                            },
+                            {
+                                "zone_id": 60,
+                                "zone_country_id": 223,
+                                "zone_code": "VI",
+                                "zone_name": "Virgin Islands"
+                            },
+                            {
+                                "zone_id": 61,
+                                "zone_country_id": 223,
+                                "zone_code": "VA",
+                                "zone_name": "Virginia"
+                            },
+                            {
+                                "zone_id": 62,
+                                "zone_country_id": 223,
+                                "zone_code": "WA",
+                                "zone_name": "Washington"
+                            },
+                            {
+                                "zone_id": 63,
+                                "zone_country_id": 223,
+                                "zone_code": "WV",
+                                "zone_name": "West Virginia"
+                            },
+                            {
+                                "zone_id": 64,
+                                "zone_country_id": 223,
+                                "zone_code": "WI",
+                                "zone_name": "Wisconsin"
+                            },
+                            {
+                                "zone_id": 65,
+                                "zone_country_id": 223,
+                                "zone_code": "WY",
+                                "zone_name": "Wyoming"
+                            }
+                        ]

@@ -1,0 +1,40 @@
+Contributed by Pavel Lepin and Charilaos Skiadas
+
+Write a function \verb|palindromic|palindromic that takes a list of numbers and evaluates to a list of numbers of the same length, where each element is obtained as follows: the first element should be the sum of the first and the last elements of the original list, the second one should be the sum of the second and second to last elements of the original list, etc.  Example: \verb|(palindromic (list 1 2 4 8))|(palindromic (list 1 2 4 8)) evaluates to \verb|(list 9 6 6 9)|(list 9 6 6 9).
+
+Define a stream \verb|fibonacci|fibonacci, the first element of which is 0, the second one is 1, and each successive element is the sum of two immediately preceding elements.
+
+Write a function \verb|stream-until|stream-until that takes a function \verb|f|f and a stream \verb|s|s, and applies \verb|f|f to the values of \verb|s|s in succession until \verb|f|f evaluates to \verb|#f|#f.
+
+Write a function \verb|stream-map|stream-map that takes a function \verb|f|f and a stream \verb|s|s, and returns a new stream whose values are the result of applying \verb|f|f to the values produced by \verb|s|s.
+
+Write a function \verb|stream-zip|stream-zip that takes in two streams \verb|s1|s1 and \verb|s2|s2 and returns a stream that produces the pairs that result from the other two streams (so the first value for the result stream will be the pair of the first value of \verb|s1|s1 and the first value of \verb|s2|s2).
+
+Thought experiment: Why can you not write a function \verb|stream-reverse|stream-reverse that is like Racket's \verb|reverse|reverse function for lists but works on streams.
+
+Write a function \verb|interleave|interleave that takes a list of streams and produces a new stream that takes one element from each stream in sequence. So it will first produce the first value of the first stream, then the first value of the second stream and so on, and it will go back to the first stream when it reaches the end of the list. Try to do this without ever adding an element to the end of a list.
+
+Define a function \verb|pack|pack that takes an integer \verb|n|n and a stream \verb|s|s, and returns a stream that produces the same values as \verb|s|s but packed in lists of \verb|n|n elements. So the first value of the new stream will be the list consisting of the first \verb|n|n values of \verb|s|s, the second value of the new stream will contain the next $\verb|n|$$ values, and so on.
+
+We'll use Newton's Method for approximating the square root of a number, but by producing a stream of ever-better approximations so that clients can "decide later" how approximate a result they want:  Write a function \verb|sqrt-stream|sqrt-stream that takes a number \verb|n|n, starts with \verb|n|n as an initial guess in the stream, and produces successive guesses applying f_n(x)=\frac{1}{2}((x+\frac{n}{x})f 
+n
+​
+ (x)= 
+2
+1
+​
+ ((x+ 
+x
+n
+​
+ ) to the current guess.
+
+Now use \verb|sqrt-stream|sqrt-stream from the previous problem to define a function \verb|approx-sqrt|approx-sqrt that takes two numbers \verb|n|n and \verb|e|e and returns a number xx such that x\cdot xx⋅x is within \verb|e|e of \verb|n|n.  Be sure not to create more than one stream nor ask for the same value from the stream more than once.  Note: Because Racket defaults to fully precise rational values, you may wish to use a floating-point number for \verb|n|n (e.g., 10.0 instead of 10) as well as for \verb|e|e.
+
+Write a macro perform that has the following two forms: 
+
+\verb|(perform e1 if e2)|(perform e1 if e2)
+
+      \verb|(perform e1 unless e2)|(perform e1 unless e2)
+
+    \verb|e1|e1 should be evaluated (once) depending on the result of evaluating \verb|e2|e2 -- only if \verb|e2|e2 evaluates to \verb|#f|#f in the latter case, and only if it doesn't in the former case. If \verb|e1|e1 is never evaluated, the entire expression should evaluate to \verb|e2|e2. Neither \verb|e1|e1 nor \verb|e2|e2 should be evaluated more than once in any case.

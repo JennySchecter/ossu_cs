@@ -1,0 +1,841 @@
+一、概览
+Functional Statically   :   ML
+Functional Dynamically  :   Racket
+Object-Oriented Statically       :   Java、C#,etc. 
+Object-Oriented Dynamically      :   Ruby
+
+二、Ruby 对象、类、方法、变量等
+
+class ClassName
+  def Method
+	Method Body
+  end
+
+end
+
+实例化类 x = ClassName.new   or  ClassName.new(...) construct argument
+
+1.实例变量 
+@开头 只能类的实例调用,私有，没有直接方法可以访问其他对象的实例变量 调用方式 obj.foo
+同一个类的不同实例也不能访问彼此的实例变量
+2.类变量
+ @@开头  被所有实例共享，但不同类的对象仍然不能直接访问   obj.foo
+3.类常量 
+大写字母开头  调用  C::Foo  不建议修改
+4.类方法 对应JAVA和C中的静态方法 static function
+和实例方法有区别，任何实例变量或者实例方法都无法访问；
+可以在类的外部使用，C.method_name args, 定义语法：
+def self.method_name args
+    ...
+end
+5.别名
+如果 x = ClassName.new  y = x ,那么x是y的别名 他们指向同一个对象，更改y的实例变量x也会受到影响
+
+三、可见性及获取设置
+
+1. getter/setter设置及访问变量
+2. 语法糖
+假设x,y,z 分别是类的实例变量
+attr_reader :y, :z # defines getters
+attr_accessor :x # defines getters and setters
+3. 方法的三种可见性 public、protected、private
+如果是私有方法，应该直接调用 m or m(args) ，而不能 self.m
+
+四、一些语法
+1.条件语句，可以把任何对象都视为true,除了false和nil
+2.setter
+def foo= x
+@blah = x * 2
+end
+
+可以写e.foo=(17) 改变实例变量blah的值，但也可以使用语法糖写作：e.foo = 17 ，看起来像一个赋值语句
+
+3.在C/C++/JAVA中的this，在ruby中使用self
+
+五、任何事务都是对象
+1. 包括nil，与c++/java中的null不同，nil在ruby是一个对象
+nil.nil? Ture ,在ruby中nil被认为是false,ruby中有2中false ，一种是nil,一种是常量false
+
+六、数组 Array 与 Block
+1. 数组及操作和PHP的数组很像，区别在于索引溢出不会报错，访问一个不存在的索引将返回nil,而不是抛出异常
+2. 对数组的各种便利操作基本在block中，block等于是closure,
+如：map、select(filter)、inject(reduce or foldl)、
+3. block在ruby中不是对象，不可以作为值传递，存储
+4. block使用方法，你可以传递0或者1个block给一个方法
+object.method(args) {|x| x + 1}   |x|即参数， 多个参数|x,y|
+花括号也可以用do  end 代替
+5. blocks在方法内部是关键字yield
+6. 如果要创建一个闭包数组，则要使用Proc实例，Proc中有个lambda方法，和call 方法，可以用来存储传递闭包
+a = [3,4,5,6]
+b = a.map {|x| {|y| x>=y} }   Wrong! syntax error
+b = a.map {|x| lambda {|y| x>=y} } Correct! 
+将会创建一个闭包的数组, b[0] 其实就是 lambda {|y| 3>=x}, 属于Proc的一个实例，可以使用call方法传递参数
+b[0].call 10  返回false
+
+七、Hash 和 Ranges
+1. Hash 和数组很像，注意each之类的方法会有2个参数 h.each {|k,v| ...}
+2. ranges 1..100
+3. hash/ranges/array  区别
+ranges比array效率高，如果没有数字键能满足你对描述数据的要求就用hash
+
+八、子类
+1. is_a? 子类父类都返回true, instance_of? 只有当前类的会返回true
+
+九、方法查找的精确定义 method look-up
+当前类查找，没有再向继承链上查找
+
+++++++++++++++++++++++++++ OOP 与 FP 的比较 ++++++++++++++++++++++++++=
+十、从扩展性的灵活角度来说
+例如，我设计一个表达式，用FP 与 OOP方法集成
+	eval	toString    hasZero ...
+Int
+Negate
+Add
+Multi
+...
+
+用FP即对以上按列分解写三个方法
+用OOp即按行分解构建3-4个类，在每个类中完善各自的eval/toString/hasZero方法
+
+由此可见，如果增加新的方法，对FP来说很方便，若增加新的类型则对OOP方便
+
+十一、双重分发 double dispatch
+
+十二、mixin 
+类似trait,一些方法的集合。
+1. mixin定义
+Module M 
+  def add
+  end
+  ... 
+end
+
+2.mixin 使用
+class A
+  Include M
+  ...
+end
+
+3. Look up rules 方法查找规则
+先查对象方法，再查对象中的mixin中是否有方法；再查对象的父类，再查对象的父类中的minxin.... 以此类推
+
+4. 抽象方法和FP的高阶函数十分类似，都是传递代码。
+
+在一个静态类型且没有多重继承的语言中，你期望看到接口。
+
+
+Section 10
+
+十三、子类型   这一章非常重要，需要不时回头看看
+1. 子类型介绍  表达式有不同的类型
+ML最具表现力的关键来源是(不要拒绝太多不会出错的程序，因为程序员很可能就是这么写的)参数的多态性(Parametric polymorphsim)，也就是泛型(generics)
+
+2. 我们设计的子类型的规则（实际上是结合了SML的多态和JAVA的一些特性，这样的语言其实不存在）
+ · “宽度”-子类型可以拥有超类额外的字段
+ · “置换”-超类和子类可以拥有相同的字段但顺序不同
+ · “传递性”- t1<:t2,t2:<t3,那么t1<:t3
+ · “自反性”- 每个类型都是他自己的子类
+
+3. 但以上的子类型规则不可加上深度子类型规则，即：
+ 如果 ta<: tb
+则：{f1:t1,f2:...,f:ta} <: {f1:t1,f2:...,f:tb}
+这是不允许的，因为会违背类型检验规则。
+这个道理通常容易被遗忘，在一个有记录(或对象)、字段有getter/setter的语言中，深度子类型是不可靠的，你不能在子类型和超类型中为一个字段使用不同的类型。
+
+当然，如果一个字段是不允许更改的，那么深度子类型则是可靠的。
+即 **** 允许setter、允许depth subtyping、一个可靠的类型系统，这三个同时只能满足2个，不可能全部满足。***
+
+4. 在JAVA和C#中是允许数组子类型的，及在调用时允许，但是代价是在每次存储数组的值的时候 e1[e2] = e3, 对所有数组存储进行检查。每次更新数组都会做这个检查，可能会引发异常。
+
+5. 函数的子类型
+ta->tb, 作为函数的类型
+F1 (f : (t1->t2), p)
+
+思考：如果F1 接收这样类型的函数f作为参数，假设 t4<:t2, 那我们是否可以将 t1->t4 这样类型的函数作为F1的第一个参数呢？
+可以，因为允许你的返回值是子类型(可返回更多的参数)，即结果的协变， t1->t4 <: t1->t2 
+
+思考：如果F1 接收这样类型的函数f作为参数，假设 t3<:t1, 那我们是否可以将 t3->t2 这样类型的函数作为F1的第一个参数呢？
+
+答案是不可以的，因为不能保证 t3->t2类型的函数中，不会用到t3的额外属性，简言之，ta<:tb 并不意味着ta->t <: tb->t,
+因为这意味使用了一个“需要更多参数”的函数来代替一个“需要更少参数”的函数，打破了类型规则。
+
+思考：如果F1 接收这样类型的函数f作为参数，假设 t1<:t3, 那我们是否可以将 t3->t2 这样类型的函数作为F1的第一个参数呢？
+答案是可以的，因为我们需要更少的参数，这种术语叫做逆变(contravariance),意思是参数类型的子类型是整个类型的子类型的反向
+
+因此，对于函数子类型的一个通用规则是，如果t1<:t3, t4<:t2, 那么 t3->t4 <: t1->t2
+ t1<:t3 参数的逆变 contravariance， t4<:t2 结果的协变 covariance
+
+6. OOP的子类型
+和records与函数的子类型定义一致，即对象的字段遵循records子类型规则，对象的方法遵循函数子类型规则
+
+7. Class 和 type 的区别
+Classes are about behavior, types are about interfaces, 
+
+7. 泛型和子类型
+一种语言可以同时具有泛型与子类型
+
+
+
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++期末考试+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+一、练习
+1. Check a box if and only if it is an accurate description of Racket.关于racket的精确描述   CEF
+A:Removing parentheses from around a function call can change a program's meaning, but it is always okay to add an extra set of parentheses. 删除函数调用周围的括号可能会改变程序的含义，但添加一组额外的括号总是可以的。 
+B:The library function set-mcar! can be implemented in terms of set!.  库函数集mcar!可以用set!来实现
+C:An anonymous function can be written anywhere an expression is allowed.匿名函数可以写在任何允许使用表达式的地方。
+D:Racket is a weakly typed language. racke是弱类型语言
+E:Thunking is a programming idiom that does not need special support in the language beyond first-class function closures.
+thunking是一种编程惯用法，除了一等函数闭包之外，它在语言中不需要特别的支持。
+F:At the top-level in a file, an earlier function definition can refer to a later function definition.
+在文件的顶层，前面的函数定义可以引用后面的函数定义.
+
+2.Which of the following Racket functions correctly takes a stream s and returns a stream that repeats each stream element from s twice?  So, for example, calling the function with the stream that generates 1 2 3  ... would return a stream that generates 1 1 2 2 3 3 ...
+下面那个racket函数准确地传入一个stream并且返回一个stream,且重复每个stream的元素2次？  A
+
+A:  (define (twice-each s)
+  (lambda ()
+    (let ([pr (s)])
+      (cons (car pr)
+            (lambda ()
+              (cons (car pr)
+                    (twice-each (cdr pr))))))))
+B:(define (twice-each s)
+  (lambda ()
+    (let ([pr (s)])
+      (cons (car pr)
+            (lambda ()
+              (cons (car pr)
+                    (twice-each (cdr pr))))))))
+C:(define (twice-each s)
+  (lambda ()
+    (let ([pr (s)])
+      (cons (car pr)
+            (cons (car pr)
+                  (twice-each (cdr pr)))))))
+D:(define (twice-each s)
+  (let ([pr (s)])
+    (cons (car pr)
+      (lambda ()
+        (cons (cdr pr)
+              (twice-each ((cdr pr))))))))
+
+3.Which of the following is true of the promises we studied and defined using \verb|my-force|my-force and \verb|my-delay|my-delay in Racket?  AD
+A:Evaluating (my-force (my-delay (lambda () e))) always produces the same result as evaluating e.
+B:Evaluating (my-delay (my-force (lambda () e))) always produces the same result as evaluating e.
+C:Evaluating (my-force (my-delay (my-delay (lambda () e)))) always produces the same result as evaluating e.
+D:Evaluating (my-force (my-delay (my-delay (lambda () e)))) will not evaluate e.
+
+
+4.Let e be a Racket expression.  Consider these two versions of function f:
+(define (f) ; call this version A
+  (let ([x e])
+    (if x x 42)))
+
+(define (f) ; call this version B
+  (if e e 42))
+
+Check the box below if and only if there exists any e such that the statement is true.  Note different choices below can be true by choosing a different e for each, but in the code above we mean the same expression e wherever e appears.
+
+AD
+
+A:Calling version A is equivalent to calling version B.
+
+
+B:Calling version A evaluates e more times than calling version B.
+
+
+C:Calling version A does not terminate but calling version B does terminate.
+
+
+D:Version A and version B both always return 42.
+
+5.Suppose a MUPL interpreter implements lexical scope for function calls incorrectly by evaluating the function body using the environment where the function is called rather than where it is defined.  Which of the MUPL programs below is a good test for this bug because \verb|(eval-exp ...)|(eval-exp ...) will produce the wrong answer if \verb|...|... is replaced with the MUPL program.
+
+A few relevant Racket struct definitions for MUPL are repeated here as a convenient reminder:    B
+
+;; a variable, e.g., (var "foo")
+(struct var (string) #:transparent) 
+
+;; a constant number, e.g., (int 17)
+(struct int (num) #:transparent) 
+
+;; a recursive(?) 1-argument function
+(struct fun (nameopt formal body) #:transparent) 
+
+;; function call
+(struct call (funexp actual) #:transparent) 
+
+;; a local binding (let var = e in body)
+(struct mlet (var e body) #:transparent) 
+
+A:(mlet "x" (int 0)
+      (mlet "x" (int 1)
+            (mlet "f" (fun #f "y" (var "x"))
+                  (call (var "f") (var "x")))))
+B:(mlet "x" (int 0)
+      (mlet "x" (int 1)
+            (mlet "f" (fun #f "y" (var "x"))
+                  (call (var "f") (var "x")))))
+C:(mlet "x" (int 0)
+      (mlet "x" (int 1)
+            (mlet "f" (fun #f "y" (var "x"))
+                  (call (var "f") (var "x")))))
+D:(mlet "x" (int 0)
+      (mlet "x" (int 1)
+            (mlet "f" (fun #f "y" (var "x"))
+                  (call (var "f") (var "x")))))
+
+6. Suppose we change ML so that its type system works as follows: If a function takes a tuple with n pieces, then you can call that function with any tuple with m pieces as long as m >= n.  (At run-time, the extra tuple components would be evaluated before calling the function and then ignored by the function body.)  We do not change what the ML type system is supposed to prevent except for this particular change of allowing tuples that are "too big" for function calls.  Which of the following is true? B
+
+A:The type system before this change is sound and complete and after this change is sound and complete.
+
+
+B:The type system before this change is sound and not complete and after this change is sound and not complete.
+
+
+C:The type system before this change is sound and complete and after this change is sound and not complete.
+
+
+D:The type system before this change is sound and complete and after this change is not sound but is complete.
+
+
+E:The type system before this change is sound and not complete and after this change is not sound and not complete.
+
+7.For each of the following, check the box if and only if it is an accurate description of an advantage of static typing over dynamic typing.对于下面的每一个选项，当且仅当它是对静态类型相对于动态类型优势的准确描述时，请勾选该复选框。  AC
+
+
+A:If you are writing a function/method that should be called only with values of one type, it is more convenient because you do not need to add a run-time type test to the function/method body.如果你正在写一个函数/方法，它只能被一种类型的值调用，这会更方便，因为你不需要在函数/方法体中添加运行时类型测试
+
+
+B:Static checking catches all the simple bugs, so your testing only has to test how multiple functions/methods are used together.静态检查捕获了所有简单的bug，所以你的测试只需要测试多个函数/方法是如何一起使用的。
+
+
+C:If you change the return type of a function/method, the type-checker will give a list of callers that still assume the old return type.
+如果你改变了函数/方法的返回类型，类型检查器会给出一个仍然假定旧返回类型的调用者列表。
+
+
+D:Languages with static type systems cannot have security bugs where "anything might happen."使用静态类型系统的语言不会有“任何事情都可能发生”的安全漏洞。
+
+
+E:language with static typing always supports generic types, which are more powerful than subtyping.具有静态类型的语言总是支持泛型类型，它比子类型更强大。
+
+8.This question uses this Ruby code, where ... is assumed to be some correct code not relevant to the question.
+class A
+  def m1
+    self.m2()
+  end
+  def m2
+    ...
+  end
+end
+module M
+  def m3
+    self.m4()
+  end
+end
+class B < A
+  def m2
+    ...
+  end
+end
+class C < A
+  include M
+  def m4
+    ...
+  end
+end
+class D < B
+  include M
+end
+
+For each Ruby expression below, check the box if evaluating the expression would lead to a method-missing error.
+那个表达式会引起方法不存在的错误？  BF
+
+A:  B.new.m1
+
+
+B:  B.new.m3
+
+
+C:  C.new.m1
+
+
+D:  C.new.m3
+
+
+D:  D.new.m1
+
+
+E:  D.new.m3
+
+
+ 
+9.Check the box if and only if the statement is true.  选择为真的  BE   未选择所有正确答案
+A: It should be a run-time error in Ruby to send the push message to an array holding 0 elements.
+在Ruby中，将推送消息发送到一个包含0个元素的数组应该是一个运行时错误。
+
+B: In Ruby, a method can use yield to call the block provided by the caller even if the method did not indicate that it expected a block.
+在Ruby中，一个方法可以使用yield来调用调用者提供的块，即使该方法没有表明它需要一个块。
+
+C: In Ruby, the class of object nil is nil, so no methods are defined on this object.在Ruby中，对象nil的类是nil，所以这个对象上没有定义方法
+
+
+D: In OOP, defining a method in a class that just returns the value of a field (what Ruby calls an instance variable) is not useful: it is analogous to unnecessary function wrapping.在OOP中，在类中定义一个只返回字段值的方法(Ruby称之为实例变量)是没有用的:它类似于不必要的函数包装。
+
+
+E: Ruby has a notion of subclassing but no notion of subtyping.
+Ruby有子类的概念，但没有子类型的概念
+
+F: Dynamic dispatch means that a call like self.foo in a method defined in class A could call code in a subclass of A that the writer of the class A code  does not know exists.动态调度是指像self这样的调用。在类a中定义的方法中的foo可以调用类a子类中的代码，而类a代码的编写者并不知道这些代码的存在。
+
+
+G: If class C overrides method m from a superclass, then in the body of C's definition of m, the keyword super is just syntactic sugar for m.如果类C覆盖了超类中的方法m，那么在C定义的m中，关键字super只是m的语法糖。
+
+10.Which of the following programming problems would lead to a solution using double dispatch in Ruby if the programmer wanted to maintain a "full" commitment to OOP?如果程序员想保持对OOP的“完全”承诺，以下哪一个编程问题将导致在Ruby中使用双重分发的解决方案? C
+
+A: Provide a reusable Button class for a graphical interface that subclasses can specialize by changing the size, color, and text of the button.为图形界面提供可重用的按钮类，子类可以通过更改按钮的大小、颜色和文本来特化按钮。
+
+
+B: Provide a class like ML's lists that has a sort method that reuses methods provided by standard-library mixins.
+提供一个类似ML's lists的类，它有一个sort方法，可以重用标准库mixin提供的方法。
+
+C: Provide classes that represent each of the "essential" amino acids, each with a method resultOfCombining that takes an argument that is another "essential" amino acid and returns the protein resulting from combining the two amino acids.提供表示每种“必需”氨基酸的类，每个类都有一个resultofcombination方法，该方法接受一个参数，该参数是另一种“必需”氨基酸，并返回组合两种氨基酸后得到的蛋白质。
+
+
+D: Provide a mixin that is like Enumerable except it raises an error if any of its methods are used on an empty collection, where the notion of emptiness is provided by classes via an empty? method.
+提供一个类似于Enumerable的mixin，但如果将其任何方法用于空集合，则会抛出错误，而类通过empty?方法。
+
+11. In this problem, suppose we add record subtyping and function subtyping to ML. Because ML records are immutable (there is no way to assign to a field after a record is created), depth subtyping is sound for records. So assume record subtyping supports width, permutation, and depth, and that function subtyping supports contravariant arguments and covariant results.
+
+For each of the function calls below, check the box if and only if the function call should type-check assuming these variables have the types indicated:
+在这个问题中，假设我们将记录子类型和函数子类型添加到ML中。因为ML记录是不可变的(在创建记录后没有办法分配字段)，深度子类型对于记录来说是合理的。假设记录子类型支持width、permutation和depth，而函数子类型支持逆变参数和协变结果。
+
+对于下面的函数调用，当且仅当函数调用应该进行类型检查时，勾选复选框，假设这些变量具有指定的类型:
+
+(* assume these variables are bound to functions with the given 
+   types; they are used below *)
+
+
+val f1 : { a:int, b : { c:int, d:int } } -> { a:int } = ...
+val f2 : { a:int } -> { a:int, b : { c:int, d:int } } = ...
+val f3 : { a:int, b : { c:int, d:int } } 
+           -> { a:int, b : { c:int, d:int } } = ...
+val f4 : (({ a:int, b : { c:int} } -> { a:int }) * int) -> { a:int } = ...
+
+val r1 : { a:int } = { a = 1 }
+val r2 : { a:int, b : { c:int} } = { a=1, b = { c=2 } }
+val r3 : { a:int, b : { c:int, d:int}, e:int } = 
+    { a=1, b = { c=2, d=3}, e=4 }
+val r4 : { a:int, b : { c:int, d:int, e:int }} = 
+    { a=1, b = { c=2, d=3, e=4} }
+
+BCDEFGHJ
+
+A: f1 r1		B: f1 r2		C: f1 r3 	D: f1 r4 	E: f2 r1		F: f2 r2		
+
+G: f2 r3		H: f2 r4		I: f4(f1,42)	J: f4(f2,42)	K:f4(f3,42)
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++二、考试+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+1. Check a box if and only if it is an accurate description of Racket.   ABEF 错误6/12   ABE 4/12     ABDF
+
+A: (define (f x y) e) is syntactic sugar for the curried function definition (define f (lambda (x) (lambda (y) e))).
+(define (f x y) e)是柯里化函数定义的语法糖(define f (lambda (x) (lambda (y) e)))
+
+B: Without let*-expressions, Racket programmers could just use nested let-expressions, but the result would have more parentheses.
+如果没有let*表达式，Racket程序员可以只使用嵌套的let表达式，但结果会有更多的括号。
+
+C: It is a run-time error for the first argument to an if-expression not to be a boolean.
+如果if表达式的第一个参数不是布尔值，将会运行时错误。 错误 if的第一个表达式计算结果只要不是false就计算第二个表达式，否则计算第三个
+
+D: A struct definition for a struct with n (immutable) fields adds n+2 functions to the environment.
+具有n个(不可变)字段的结构体的结构体定义会向环境中添加n+2个函数。
+
+E: A struct definition is syntactic sugar for introducing several functions that operate over Racket lists.
+结构体定义是一种语法糖，用于引入几个操作球拍列表的函数。 错误struct不是语法糖
+
+F: A function call always evaluates each argument exactly once, but a macro use may not evaluate each argument exactly once.
+函数调用总是精确地计算每个参数一次，但宏使用可能不会精确地计算每个参数一次。
+
+2.This incorrect Racket code is supposed to bind to longer-strings a stream where the Nth element of the stream is the string containing the character A N times.   D 错误   B正确
+(define longer-strings
+  (lambda ()
+    (letrec ([f (lambda(s)
+                  (cons s (f (string-append "A" s))))])
+      (f "A"))))
+What is wrong with this code?
+正确代码：
+(define longer-strings
+  (lambda ()
+    (letrec ([f (lambda(s)
+                  (cons s (λ ()(f (string-append "A" s)))))])
+      (f "A"))))
+
+A: longer-strings is bound to a function, but it should be bound to a pair.
+
+
+B: Calls to longer-strings will never terminate because there is too little thunking.
+
+
+C: Calls to longer-strings will never terminate because the function bound to f needs a conditional.
+
+
+D: Calls to longer-strings will never terminate because the function bound to f is returning a procedure somewhere where it needs to return a call to the procedure.
+
+3. Which statement below accurately describes the function bound to mystery in this Racket code? D  正确
+(define (mystery s)
+  (lambda ()
+    (let ([pr (s)])
+      (if (car pr)
+          (cons (car pr) (mystery (cdr pr)))
+          ((mystery (cdr pr)))))))
+
+A: It takes a stream and generates all its elements, causing an infinite loop for any call to mystery.
+
+
+B: It takes a stream and generates a list of its elements up to the first #f in the stream.
+
+
+C: It takes a list and returns a stream that repeatedly generates the elements in the list in order.
+
+
+D: It takes a stream and returns a stream that is like the stream it takes except all #f elements are removed.
+它接收一个流，并返回一个与它接收的流类似的流，只是删除了所有#f元素。
+
+4.What is the difference between these two pieces of Racket code?  (Here we assume e1 and e2 are arbitrary, unspecified Racket expressions.  We also assume e1 does not contain a use of y.) E  错误   A
+
+(define f (let ([x e1]) (lambda (y) e2))) ; call this code A
+
+(define f (lambda (y) (let ([x e1]) e2))) ; call this code B
+
+
+A: Code A evaluates e1 once whereas Code B evaluates e1 once every time the function bound to f is called.代码A对e1求值一次，而代码B在每次调用绑定到f的函数时对e1求值一次。
+
+B: Code B evaluates e1 once whereas Code A evaluates e1 once every time the function bound to f is called.代码B对e1求值一次，而代码A每次调用绑定到f的函数时对e1求值一次。
+
+
+C: Code A evaluates e1 only if, at run-time, e2 uses the variable x, but Code B always evaluates e1 assuming f is used at least once.
+代码A只在运行时e2使用变量x时才计算e1，但代码B总是在f至少使用一次的情况下计算e1。
+
+D: Code B evaluates e1 only if, at run-time, e2 uses the variable x, but Code A always evaluates e1 assuming f is used at least once.
+代码B只在运行时e2使用变量x时才计算e1，但代码A总是在f至少使用一次的情况下计算e1。
+
+E: There is no semantic difference: although the order of the code is different, code A and code B are equivalent for any e1 and e2.
+语义上没有区别:虽然代码的顺序不同，但代码A和代码B对于任何e1和e2都是等价的。
+
+5. In this question, RUPL is like the language MUPL except it is really small, containing only integers, variables, additions, and let-expressions.  What is wrong with this implementation?在这个问题中，RUPL类似于MUPL语言，除了它非常小，只包含整数、变量、加法和let表达式。这个实现有什么问题?   D  正确
+
+
+(struct var  (string) #:transparent);; a variable, e.g., (var "foo")
+(struct int  (num)    #:transparent) ;; a number, e.g., (int 17)
+(struct add  (e1 e2)  #:transparent) ;; add two expressions
+(struct mlet (var e body) #:transparent) ;; a local binding 
+                                         ;; (let var = e in body)
+
+(define (envlookup env str)
+  (cond [(null? env) (error "unbound variable" str)]
+        [(equal? (car (car env)) str) (cdr (car env))]
+        [#t (envlookup (cdr env) str)]))
+        
+(define (eval-under-env e env)
+  (cond [(var? e) (envlookup env (var-string e))]
+        [(int? e) e]
+        [(add? e) 
+         (let ([v1 (eval-under-env (add-e1 e) env)]
+               [v2 (eval-under-env (add-e2 e) env)])
+           (if (and (int? v1)
+                    (int? v2))
+               (int (+ (int-num v1) 
+                       (int-num v2)))
+               (error "RUPL addition applied to non-number")))]
+        [(mlet? e) 
+         (let ([v (eval-under-env (mlet-e e) env)])
+           (eval-under-env (mlet-body e) env))]
+        [#t (error "bad RUPL expression")]))
+
+(define (eval-exp e)
+  (eval-under-env e null))
+
+
+A: The case for variables is wrong because we should recursively call eval-under-env in this case.
+变量的情况是错误的，因为在这种情况下，我们应该递归调用eval-under-env。
+
+B: The case for integer expressions is wrong: we should return (int-num e).整数表达式的情况是错误的:我们应该返回(int-num e)。
+
+
+C: The case for addition expressions is wrong: we should write e1 and e2 where we have (add-e1 e) and (add-e2 e).
+加法表达式的情况是错误的:我们应该在有(add-e1 e)和(add-e2 e)的地方写e1和e2。
+
+D: The case for mlet-expressions is wrong: we do not use the correct environment to evaluate the let-expression body.
+mlet表达式的情况是错误的:我们没有使用正确的环境来计算let表达式的主体。
+
+6. In this question, we consider what would happen if we ported (i.e., rewrote) Racket code to ML.  Assume we write the code by only changing the syntax as follows: Racket functions become ML functions, Racket conditionals become ML conditionals, Racket addition becomes ML addition,  Racket car becomes ML hd, and Racket null becomes ML [].
+
+For each function below, check the box if and only if the ML rewrite of the function would type-check (with some type).  (Always assume we port the code so that the ML code parses correctly.)
+在这个问题中，我们考虑如果我们将球拍代码移植(即重写)到ML会发生什么。假设我们只修改如下语法来编写代码:球拍函数变成ML函数，球拍条件变成ML条件，球拍添加变成ML添加，球拍car变成ML hd，球拍null变成ML[]。
+对于下面的每个函数，当且仅当ML重写的函数会进行类型检查(使用某种类型)时，选中复选框。(始终假设我们移植了代码，以便ML代码能够正确解析。)
+
+CEF  只得了2分/12   ABD 10/12   ABDE
+A: (define (f1 x) (if x 37 42))
+
+
+B: (define (f2 x) (if x x x))
+
+
+C: (define (f3 x) (if x 42 x))
+
+
+D: (define (f4 x) (car null))
+
+
+E: (define (f5 x) (+ (car x) 42))
+
+
+F: (define (f6 x) (car (+ x 42)))
+
+
+7. For each of the following, check the box if and only if it is an accurate description of an advantage of static typing over dynamic typing.
+
+对于下面的每一个选项，当且仅当它是对静态类型相对于动态类型优势的准确描述时，请勾选该复选框  AB  正确
+
+A: Static typing catches some simple bugs without having to test your code.静态类型可以在不测试代码的情况下捕获一些简单的bug
+
+
+B: Static typing can produce faster code because the language implementation does not need to perform type tests at run time.
+静态类型可以生成更快的代码，因为语言实现不需要在运行时执行类型测试。
+
+
+C: Static typing lets you change the type of a function as its requirements evolve without ever having to change any of the function's callers.
+静态类型允许您根据需求更改函数的类型，而无需更改函数的任何调用者。
+
+D: Static typing is necessary to avoid the security and reliability problems of weak typing.静态类型是必要的，可以避免弱类型的安全性和可靠性问题。
+
+
+E: Static typing does not make sense for OOP.静态类型对OOP没有意义。
+
+
+8. This question uses this Ruby class definition:  
+class A
+  attr_accessor :x
+  def m1
+    @x = 4
+  end
+  def m2
+    m1
+    @x > 4
+  end
+  def m3
+    @x = 4
+    @x > 4
+  end
+  def m4
+    self.x = 4
+    @x > 4
+  end
+end
+
+For each statement below, check the box if and only if the statement is true.  In all cases, consider only a definition of class B, not code that makes any changes to class A.对于下面的每条语句，当且仅当该语句为真时，在方框中打勾。在所有情况下，只考虑类B的定义，而不是对类a进行任何更改的代码。   
+没看懂答案，选A? 修改m1方法得了6分/9  AC 正确
+
+
+A: It is possible to define a class B such that evaluating B.new.m2 causes the method m2 defined in class A (not an override of m2) to return true.
+
+
+B: It is possible to define a class B such that evaluating B.new.m3 causes the method m3 defined in class A (not an override of m3) to return true.
+
+
+C: It is possible to define a class B such that evaluating B.new.m4 causes the method m4  defined in class A (not an override of m4) to return true.
+
+
+9.This problem uses this Ruby class definition, which includes a mixin:
+class MyRange
+  include Enumerable
+  def initialize(low,high)
+    @low = low
+    @high = high
+  end
+  def each
+    i=@low
+    while i <= @high
+      yield i
+      i=i+1
+    end
+  end
+end
+
+Given this definition, the expression @MyRange.new(4,2).any? {|i| i <= 4} evaluates to false.  Why?
+
+不懂，猜D 错误  B 正确
+
+A: Because instances of MyRange do not have a method any?.
+因为MyRange的实例没有any?方法。
+
+B: Because the each method for the object created by MyRange.new(4,2) never calls its block.
+因为MyRange.new(4,2)创建的对象的each方法从不调用它的代码块。
+
+C: Because the superclass of MyRange is Object, which has an any? method that always returns false.
+因为MyRange的超类是Object，它有一个any?总是返回false的方法。
+
+
+D: Because the each method in MyRange implicitly returns nil and in Ruby nil is like false.
+因为MyRange中的each方法隐式返回nil，而Ruby中的nil类似于false。
+
+
+
+10.Check the box if and only if the statement is true.   BEG  正确
+
+
+A: In Ruby, it is a run-time error to create an array holding instances of different classes.
+在Ruby中，创建一个保存不同类实例的数组是一个运行时错误。
+
+B: In Ruby, you cannot store a block in an array, but you can pass a block to lambda and store the result in an array.
+在Ruby中，你不能将块存储在数组中，但你可以将块传递给lambda，并将结果存储在数组中。
+
+
+C: It does not make sense to consider adding multiple inheritance to a dynamically typed language because the purpose of multiple inheritance is to make type-checking less restrictive.
+考虑在动态类型语言中添加多重继承是没有意义的，因为多重继承的目的是减少类型检查的限制。
+
+D: In Ruby, is_a? and instance_of? are synonyms: the two methods are defined for every object and always compute the same result.
+在Ruby中，is_a?和instance_of吗?是同义词:这两个方法被定义在每个对象上，并且总是计算相同的结果。
+
+E: In Ruby, anything returned by a method is an object.在Ruby中，方法返回的任何东西都是对象。
+
+
+F: Double dispatch is special to Ruby -- it is a programming pattern that does not work in most other OOP languages.
+Double dispatch对Ruby来说是特殊的——它是一种编程模式，在大多数其他面向对象语言中不起作用。
+
+G: A Ruby mixin method included in a class can get and set instance variables of self.类中包含的Ruby mixin方法可以获取和设置self的实例变量。
+
+
+11.This problem and the next problem relate to this Ruby code:
+class A
+  def initialize a
+    @arr = a
+  end
+  def get i
+    @arr[i]
+  end
+  def sum
+    @arr.inject(0) {|acc,x| acc + x}
+  end
+end
+
+class B < A
+  def initialize a
+    super
+    @ans = false
+  end
+  def sum
+    if !@ans
+      @ans = @arr.inject(0) {|acc,x| acc + x}
+    end
+    @ans
+  end
+end
+
+Which technique that we studied is mostly closely related to the code in class B?
+
+我们学习的哪一种技术与类别B中的代码最密切相关? B  正确
+
+
+A:Thunking
+
+
+B: Memoization
+
+
+C:Mixins
+
+
+D: Double dispatch
+
+
+12.This problem uses the code in the previous problem.  Class A and class B are not equivalent.  In particular, there are ways to fill in the ... in the code below so that s3 and s4 hold different numbers.  Which change would make the two classes equivalent?
+这个问题使用了前一个问题中的代码。类A和类B并不等价。特别是，有一些方法可以填充……在下面的代码中，以便s3和s4保存不同的数字。哪些改变会使两个类等价?  A正确
+
+v = [4,19,74]
+a = A.new v
+b = B.new v
+s1 = a.sum
+s2 = b.sum
+...
+s3 = a.sum
+s4 = b.sum
+
+确实不等价，我如果把V的元素值修改了，a.sum就会改变，但是b.sum还是97    
+
+
+A: Have the initialize method in class A store a copy of its argument in @arr.
+让A类的initialize方法在@arr中存储其参数的副本。
+
+
+B: Remove the method get from class A.从类A中删除方法get。
+
+
+C: Change the sum method in both classes to use an explicit loop instead of inject and a block.修改两个类中的sum方法，使用显式循环代替inject和block。
+
+
+D: Change class A to use a class variable @@arr in place of the instance variable @arr.修改类A，使用类变量@@arr代替实例变量@arr。
+
+
+13. This problem uses the made-up language from the lectures for studying subtyping.  Recall:
+
+The language has records with mutable fields.
+
+We write types for records and functions like in ML.
+
+Records have width and permutation subtyping.
+
+Function subtyping has contravariant arguments and covariant results.
+
+Assume these bindings for functions exist and have given types:
+
+这个问题使用讲座中编造的语言来研究子类型。回忆:
+
+该语言具有可变字段的记录。
+
+我们像ML一样为记录编写类型和函数。
+
+记录有width和permutation子类型。
+
+函数子类型具有逆变的参数和协变的结果。
+
+假设存在这些函数绑定，并且有给定的类型:
+
+
+val f1 : {a:int, b:int} -> {a:int, b:int};
+val f2 : {a:int, c:{x:int, y:int}, b:int} -> {a:int, b:int};
+val f3 : int -> {a:int,b:int,c:int};
+val f4 : ({a:int,b:int,c:int} -> {a:int,b:int}) -> int;
+
+For example, f1 is bound to a function that takes a record of type {a:int, b:int} and returns a record of the same type.
+
+For each call below, check the box if and only if the call type-checks.
+
+例如，f1绑定到一个函数，该函数接受一个类型为{a:int, b:int}的记录，并返回一个相同类型的记录。
+
+对于下面的每个调用，当且仅当调用类型检查时，选中复选框  A C E G  12/14   ABCEG? 10/14
+ 
+
+A: f1 {a=3, b=4, c=5}
+
+
+B: f2 {a=3, c={x=4, y=5, z=6}, b=7}
+
+
+C: f1 (f3 4) (* call f1 with result of call (f3 4) *)
+
+
+D: f2 (f3 4) (* call f2 with result of call (f3 4) *)
+
+
+E: f4 f1
+
+
+F: f4 f2
+
+
+G: f4 f3
+
+
+
