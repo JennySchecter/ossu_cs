@@ -1,0 +1,136 @@
+Retail, Wholesale, E-commerce - Designer and/or Brand Clothing / footware / garments / purses / wallets etc. —— 零售，批发，电子商务 - 设计师和/或品牌服装 / 鞋类 / 服装 / 钱包等。
+Retail, Wholesale, E-commerce - Clothing / footware / garments / purses / wallets etc. —— 零售，批发，电子商务 - 服装 / 鞋类 / 服装 / 钱包等。
+Retail, Wholesale, E-commerce - Jewellery / watches (with precious stones/metals) —— 零售，批发，电子商务 - 珠宝 / 手表（带有宝石/贵金属）。
+Retail, Wholesale, E-commerce - Jewellery / watches (without precious stones/metals) —— 零售，批发，电子商务 - 珠宝 / 手表（不带宝石/贵金属）。
+Retail, Wholesale, E-commerce - Electronic items (cell phones, laptops, cameras etc.) —— 零售，批发，电子商务 - 电子产品（手机，笔记本电脑，相机等）。
+Retail, Wholesale, E-commerce - Vehicles / Auto parts —— 零售，批发，电子商务 - 车辆 / 汽车配件。
+Retail, Wholesale, E-commerce - Machinery and large equipment —— 零售，批发，电子商务 - 机械和大型设备。
+Retail, Wholesale, E-commerce - Household items —— 零售，批发，电子商务 - 家居用品。
+Retail, Wholesale, E-commerce - Beauty products (make-up, perfume, hair products, accessories etc) —— 零售，批发，电子商务 - 美容产品（化妆品，香水，护发产品，配件等）。
+Retail, Wholesale, E-commerce - Sports equipment —— 零售，批发，电子商务 - 体育设备。
+Retail, Wholesale, E-commerce - Child care (toys, strollers, diapers, pacifiers, etc.) —— 零售，批发，电子商务 - 儿童护理（玩具，婴儿车，尿布，安抚奶嘴等）。
+Retail, Wholesale, E-commerce - Tobacco and Tobacco Product —— 零售，批发，电子商务 - 烟草及烟草制品。
+Retail, Wholesale, E-commerce - Books / Magazines / Newspapers —— 零售，批发，电子商务 - 书籍 / 杂志 / 报纸。
+Retail, Wholesale, E-commerce - Sales of Pets —— 零售，批发，电子商务 - 宠物销售。
+Retail, Wholesale, E-commerce - Pet Supplies Stores (food, accessories etc.) —— 零售，批发，电子商务 - 宠物用品店（食品，配件等）。
+Retail, Wholesale, E-commerce - Music (instruments, vinyls, discs ect.) —— 零售，批发，电子商务 - 音乐（乐器，黑胶唱片，光盘等）。
+Retail, Wholesale, E-commerce - Drugs / Pharmaceuticles —— 零售，批发，电子商务 - 药品 / 医药产品。
+Retail, Wholesale, E-commerce - Chemicals (other than drugs/pharmaceuticles) —— 零售，批发，电子商务 - 化学品（除药品/医药产品外）。
+Retail, Wholesale, E-commerce - Vitamins and supplements —— 零售，批发，电子商务 - 维生素和补充剂。
+Retail, Wholesale, E-commerce - Pharmacy —— 零售，批发，电子商务 - 药房。
+Retail, Wholesale, E-commerce - Medical devices / supplies —— 零售，批发，电子商务 - 医疗设备 / 供应品。
+Retail, Wholesale, E-commerce - Art supplies / Stationery supplies —— 零售，批发，电子商务 - 艺术用品 / 文具用品。
+Retail, Wholesale, E-commerce - Art work (paintings, photographs, sculptures, etc.) —— 零售，批发，电子商务 - 艺术作品（绘画，摄影，雕塑等）。
+Retail, Wholesale, E-commerce - Firearms and other weapons —— 零售，批发，电子商务 - 枪支和其他武器。
+Retail, Wholesale, E-commerce - Beverage providers/suppliers (Alcoholic, spirits) —— 零售，批发，电子商务 - 饮料供应商（含酒精，烈酒）。
+Retail, Wholesale, E-commerce - Beverage providers/suppliers (non-alcoholic) —— 零售，批发，电子商务 - 饮料供应商（无酒精）。
+Retail, Wholesale, E-commerce - Food and Beverages —— 零售，批发，电子商务 - 食品和饮料。
+Retail, Wholesale, E-commerce - Food —— 零售，批发，电子商务 - 食品。
+Retail, Wholesale, E-commerce - Grocery / Convenience Store —— 零售，批发，电子商务 - 杂货店 / 便利店。
+Retail, Wholesale, E-commerce - Computer Software —— 零售，批发，电子商务 - 计算机软件。
+Retail, Wholesale, E-commerce - Tools / spare parts / items not listed above (Other retail or wholesale not listed above) —— 零售，批发，电子商务 - 工具 / 备件 / 未列出的物品（其他未列出的零售或批发）。
+Retail, Wholesale, E-commerce - Retail with no predominant items —— 零售，批发，电子商务 - 无主要项目的零售。
+Retail, Wholesale, E-commerce - CONSTRUCTION MATERIALS, HARDWARE, PLUMBING, AND HEATING EQUIPMENT AND SUPPLIES —— 零售，批发，电子商务 - 建筑材料，五金，管道和供暖设备及用品。
+Retail, Wholesale, E-commerce - Selling products on behalf of others (online market place) —— 零售，批发，电子商务 - 代表他人销售产品（在线市场）。
+Manufacturing - Vehicles / Auto parts —— 制造 - 车辆 / 汽车配件。
+Manufacturing - Machinery and large equipment —— 制造 - 机械和大型设备。
+Manufacturing - Electornic items / parts —— 制造 - 电子产品 / 零件。
+Manufacturing - Household items —— 制造 - 家居用品。
+Manufacturing - Sports equipment —— 制造 - 体育设备。
+Manufacturing - Designer and/or Brand Clothing / footware / garments / purses / wallets etc. —— 制造 - 设计师和/或品牌服装 / 鞋类 / 服装 / 钱包等。
+Manufacturing - Clothing / footware / garments / purses / wallets etc. —— 制造 - 服装 / 鞋类 / 服装 / 钱包等。
+Manufacturing - Jewellery / watches (with precious stones/metals) —— 制造 - 珠宝 / 手表（带有宝石/贵金属）。
+Manufacturing - Jewellery / watches (without precious stones/metals) —— 制造 - 珠宝 / 手表（不带宝石/贵金属）。
+Manufacturing - Beverage manufacturing (Alcoholic, spirits) —— 制造 - 饮料制造（含酒精，烈酒）。
+Manufacturing - Beverage manufacturing (non-alcoholic) —— 制造 - 饮料制造（无酒精）。
+Manufacturing - Food and Beverages —— 制造 - 食品和饮料。
+Manufacturing - Food —— 制造 - 食品。
+Manufacturing - Tobacco and Tobacco Product manucaturing —— 制造 - 烟草及烟草制品制造。
+Manufacturing - Beauty products (make-up, perfume, hair products, accessories etc) —— 制造 - 美容产品（化妆品，香水，护发产品，配件等）。
+Manufacturing - Chemical (other than Drugs / Pharmaceuticles) Manufacturing —— 制造 - 化学品制造（除药品/医药产品外）。
+Manufacturing - Drugs / Pharmaceuticles —— 制造 - 药品 / 医药产品。
+Manufacturing - Vitamins and supplements —— 制造 - 维生素和补充剂。
+Manufacturing - Medical devices / supplies —— 制造 - 医疗设备 / 供应品。
+Manufacturing - Pet Supplies (food, accessories etc.) —— 制造 - 宠物用品（食品，配件等）。
+Manufacturing - Music (instruments, vinyls, discs ect.) —— 制造 - 音乐（乐器，黑胶唱片，光盘等）。
+Manufacturing - Child care (toys, strollers, diapers, pacifiers, etc.) —— 制造 - 儿童护理（玩具，婴儿车，尿布，安抚奶嘴等）。
+Manufacturing - Books / Magazines / Newspapers —— 制造 - 书籍 / 杂志 / 报纸。
+Manufacturing - Art supplies / Stationery supplies —— 制造 - 艺术用品 / 文具用品。
+Manufacturing - Art work (paintings, photographs, sculptures, etc.) —— 制造 - 艺术作品（绘画，摄影，雕塑等）。
+Manufacturing - Firearms and other weapons —— 制造 - 枪支和其他武器。
+Manufacturing - Tools / spare parts / items not listed above —— 制造 - 工具 / 备件 / 未列出的物品。
+Manufacturing - Manufacturing with no predominant items —— 制造 - 无主要项目的制造。
+Entertainment Industry - Film —— 娱乐行业 - 电影。
+Entertainment Industry - Broadcasters, Radio / TV —— 娱乐行业 - 广播公司、电台 / 电视。
+Entertainment Industry - Photography —— 娱乐行业 - 摄影。
+Entertainment Industry - Games (board games, video games) —— 娱乐行业 - 游戏（棋盘游戏，视频游戏）。
+Entertainment Industry - Attractions (theme, amusement, water parks, zoos etc) —— 娱乐行业 - 景点（主题公园，游乐园，水上公园，动物园等）。
+Entertainment Industry - Performance art (theatre, comedy, magic shows etc.) —— 娱乐行业 - 表演艺术（戏剧，喜剧，魔术表演等）。
+Entertainment Industry - Music (concerts, festivals) —— 娱乐行业 - 音乐（音乐会，节日）。
+Entertainment Industry - Event planning (Personal - weddings, birthdays. Public - festivals, parades etc.) —— 娱乐行业 - 活动策划（个人 - 婚礼，生日。公共 - 节日，游行等）。
+Entertainment Industry - Other amusement and recreation activities n.e.c. (including recreation parks/beaches and recreational fishing) —— 娱乐行业 - 其他娱乐和休闲活动等（包括娱乐公园/海滩和休闲钓鱼）。
+Entertainment Industry - LIBRARIES, ARCHIVES, MUSEUMS AND OTHER CULTURAL ACTIVITIES —— 娱乐行业 - 图书馆，档案馆，博物馆和其他文化活动。
+Entertainment Industry - Sport events —— 娱乐行业 - 体育赛事。
+Entertainment Industry - Gambling (casinos, lotteries, online gambling, sports betting etc.) —— 娱乐行业 - 赌博（赌场，彩票，在线赌博，体育博彩等）。
+Entertainment Industry - Adult entertainment —— 娱乐行业 - 成人娱乐。
+Consultancy - Financial consulting —— 咨询 - 财务咨询。
+Consultancy - Marketing consulting —— 咨询 - 市场咨询。
+Consultancy - IT/ Software consulting —— 咨询 - IT/软件咨询。
+Consultancy - Human resources consulting —— 咨询 - 人力资源咨询。
+Consultancy - Strategy/Business management consulting —— 咨询 - 战略/商业管理咨询。
+Commodities - Agricultural products (coffee, corn, wheat, soybeans, cotton etc.) —— 商品 - 农产品（咖啡，玉米，小麦，大豆，棉花等）。
+Commodities - Livestock and meat (live cattle, beef, pork bellies, milk etc.) —— 商品 - 畜禽和肉类（活牛，牛肉，猪肚，牛奶等）。
+Commodities - Energy products (crude oil, natural gas, unleaded gasoline, propane, ethanol, coal etc.) —— 商品 - 能源产品（原油，天然气，无铅汽油，丙烷，乙醇，煤等）。
+Commodities - Metals (precious metals like gold and silver and industrial metals like copper, aluminum, palladium etc) —— 商品 - 金属（贵金属如黄金和白银，工业金属如铜，铝，钯等）。
+Commodities - Timber —— 商品 - 木材。
+Services - Accounting / bookkeeping / Auditing —— 服务 - 会计 / 记账 / 审计。
+Services - Security / guard firms —— 服务 - 安保公司。
+Services - Defense —— 服务 - 国防。
+Services - Agricultural / Apiculture / Aquaculture Services & Products —— 服务 - 农业 / 养蜂 / 水产业服务和产品。
+Services - Restaurants / Bars —— 服务 - 餐厅 / 酒吧。
+Services - Media / Marketing / Advertising —— 服务 - 媒体 / 市场营销 / 广告。
+Services - Printing & Publishing —— 服务 - 印刷和出版。
+Services - Telecommunication —— 服务 - 电信。
+Services - Logistics firms / shipping services (trucks, transportation, freight) —— 服务 - 物流公司 / 运输服务（卡车，运输，货运）。
+Services - Travel & Tourism —— 服务 - 旅游。
+Services - Rental services (property, car, tools, parking, etc.) —— 服务 - 租赁服务（房地产，汽车，工具，停车等）。
+Services - Real Estates sale, purchase and management —— 服务 - 房地产销售，购买和管理。
+Services - Hotels and Motels (except Casino Hotels) —— 服务 - 酒店和汽车旅馆（不包括赌场酒店）。
+Services - Casino Hotels / Motels —— 服务 - 赌场酒店 / 汽车旅馆。
+Services - Auction houses —— 服务 - 拍卖行。
+Services - Mining —— 服务 - 采矿。
+Services - Repair / Maintenance / Cleaning services —— 服务 - 维修 / 维护 / 清洁服务。
+Services - Construction —— 服务 - 建筑。
+Services - Engineering/Design Services —— 服务 - 工程/设计服务。
+Services - Architecture —— 服务 - 建筑学。
+Services - Landscaping Services —— 服务 - 景观设计服务。
+Services - Veterinary services —— 服务 - 兽医服务。
+Services - Exterminating and Pest Control Services —— 服务 - 灭虫和害虫控制服务。
+Services - Healthcare providers / Health Care Services —— 服务 - 医疗服务提供者 / 卫生保健服务。
+Services - Beauty salons (barber shop, nail, tanning salons etc.) —— 服务 - 美容院（理发店，美甲，美黑沙龙等）。
+Services - IT services —— 服务 - IT服务。
+Services - Recruiting —— 服务 - 招聘。
+Services - Dating escort services —— 服务 - 约会陪同服务。
+Services - Florists —— 服务 - 花店。
+Services - Alternative Energy Production & Services (wind, solar, geothermal, hydroelectric etc.) —— 服务 - 替代能源生产和服务（风能，太阳能，地热能，水电等）。
+Services - Utilities services (Trash Collection/Waste Management, water, gas, electricity) —— 服务 - 公用事业服务（垃圾收集/废物管理，水，气，电）。
+Services - Legal Services (Lawyers, External Counsels etc) —— 服务 - 法律服务（律师，外部顾问等）。
+Services - Government organisation (Public sector) —— 服务 - 政府机构（公共部门）。
+Services - Not for Profit Organisations (Government Incentivised entities) —— 服务 - 非营利组织（政府激励实体）。
+Services - Clergy & Religious Organizations —— 服务 - 神职人员和宗教组织。
+Services - Interior Design —— 服务 - 室内设计。
+Services - Childcare Services —— 服务 - 儿童保育服务。
+Services - Charitable organisation —— 服务 - 慈善组织。
+Services - Funeral homes and Services / Cemeteries —— 服务 - 殡仪馆及服务 / 公墓。
+Financial Services - Cryptocurrency financial services —— 金融服务 - 加密货币金融服务。
+Financial Services - Payment Platforms Providers —— 金融服务 - 支付平台提供商。
+Financial Services - MSBs/Remittance Providers —— 金融服务 - MSB/汇款提供商。
+Financial Services - Financial Services provider (adviser, mortgage broker, Loan consultant, debt recovery consultant, pension etc) —— 金融服务 - 金融服务提供商（顾问，抵押经纪人，贷款顾问，债务回收顾问，养老金等）。
+Financial Services - Banks/Building Societies/Credit Unions —— 金融服务 - 银行/建筑协会/信用合作社。
+Financial Services - Insurance providers —— 金融服务 - 保险提供商。
+Financial Services - Securities & Investment —— 金融服务 - 证券和投资。
+Financial Services - Superannuation fund providers —— 金融服务 - 养老金提供商。
+Financial Services - Crowdfunding —— 金融服务 - 众筹。
+Education Providers - Online learning —— 教育提供者 - 在线学习。
+Education Providers - Teaching and tutoring —— 教育提供者 - 教学和辅导。
+Education Providers - Schools / Universities / Colleges —— 教育提供者 - 学校 / 大学 / 学院。

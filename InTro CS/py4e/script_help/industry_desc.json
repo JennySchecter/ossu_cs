@@ -1,0 +1,738 @@
+[
+    {
+        "id": "ICCV3_1109",
+        "label": "旅居车租赁"
+    },
+    {
+        "id": "ICCV3_1108",
+        "label": "游艇租赁"
+    },
+    {
+        "id": "ICCV3_1225_ADDITIONAL_QUESTION_LABEL",
+        "label": "您的产品是否包含任何受当地法律管制的成分（如受控的大麻素）？"
+    },
+    {
+        "id": "ICCV3_0415_ADDITIONAL_QUESTION_LABEL",
+        "label": "您的产品是否包含任何受当地法律管制的成分（如受控的大麻素）？"
+    },
+    {
+        "id": "ICCV3_1028_ADDITIONAL_QUESTION_LABEL",
+        "label": "您的产品是否包含任何受当地法律管制的成分（如受控的大麻素）？"
+    },
+    {
+        "id": "ICCV3_1225",
+        "label": "补充剂和营养品"
+    },
+    {
+        "id": "ICCV3_0415",
+        "label": "补充剂和营养品"
+    },
+    {
+        "id": "ICCV3_1028",
+        "label": "补充剂和营养品"
+    },
+    {
+        "id": "ICCV3_0006",
+        "label": "软件开发"
+    },
+    {
+        "id": "ICCV3_SELECT_PLACEHOLDER",
+        "label": "选择或搜索"
+    },
+    {
+        "id": "ICCV3_00",
+        "label": "数字科技"
+    },
+    {
+        "id": "ICCV3_0000",
+        "label": "加密货币或区块链相关产品服务"
+    },
+    {
+        "id": "ICCV3_0001",
+        "label": "数码影音"
+    },
+    {
+        "id": "ICCV3_0002",
+        "label": "金融信息服务"
+    },
+    {
+        "id": "ICCV3_0004",
+        "label": "线上交友"
+    },
+    {
+        "id": "ICCV3_0005",
+        "label": "社交媒体"
+    },
+    {
+        "id": "ICCV3_0007",
+        "label": "其他"
+    },
+    {
+        "id": "ICCV3_01",
+        "label": "教育"
+    },
+    {
+        "id": "ICCV3_0100",
+        "label": "学前教育"
+    },
+    {
+        "id": "ICCV3_0101",
+        "label": "高等教育"
+    },
+    {
+        "id": "ICCV3_0102",
+        "label": "初等或中等教育"
+    },
+    {
+        "id": "ICCV3_0103",
+        "label": "线上教育平台"
+    },
+    {
+        "id": "ICCV3_0104",
+        "label": "职业教育"
+    },
+    {
+        "id": "ICCV3_0105",
+        "label": "其他"
+    },
+    {
+        "id": "ICCV3_02",
+        "label": "休闲娱乐"
+    },
+    {
+        "id": "ICCV3_0200",
+        "label": "乐队演出"
+    },
+    {
+        "id": "ICCV3_0201",
+        "label": "会员制俱乐部"
+    },
+    {
+        "id": "ICCV3_0202",
+        "label": "票务服务"
+    },
+    {
+        "id": "ICCV3_0203",
+        "label": "赌博"
+    },
+    {
+        "id": "ICCV3_0204",
+        "label": "博彩"
+    },
+    {
+        "id": "ICCV3_0205",
+        "label": "电影院"
+    },
+    {
+        "id": "ICCV3_0206",
+        "label": "非盈利机构和社会组织"
+    },
+    {
+        "id": "ICCV3_0207",
+        "label": "政治组织"
+    },
+    {
+        "id": "ICCV3_0208",
+        "label": "职业运动联队"
+    },
+    {
+        "id": "ICCV3_0209",
+        "label": "休闲露营"
+    },
+    {
+        "id": "ICCV3_0210",
+        "label": "宗教组织"
+    },
+    {
+        "id": "ICCV3_0211",
+        "label": "旅游景点"
+    },
+    {
+        "id": "ICCV3_0212",
+        "label": "其他"
+    },
+    {
+        "id": "ICCV3_03",
+        "label": "金融服务"
+    },
+    {
+        "id": "ICCV3_0300",
+        "label": "电子钱包"
+    },
+    {
+        "id": "ICCV3_0301",
+        "label": "保险"
+    },
+    {
+        "id": "ICCV3_0302",
+        "label": "投资"
+    },
+    {
+        "id": "ICCV3_0303",
+        "label": "借贷"
+    },
+    {
+        "id": "ICCV3_0304",
+        "label": "资金转移或支付"
+    },
+    {
+        "id": "ICCV3_0305",
+        "label": "典当"
+    },
+    {
+        "id": "ICCV3_0306",
+        "label": "证券交易服务"
+    },
+    {
+        "id": "ICCV3_0307",
+        "label": "其他"
+    },
+    {
+        "id": "ICCV3_04",
+        "label": "制造"
+    },
+    {
+        "id": "ICCV3_0400",
+        "label": "酒精制造"
+    },
+    {
+        "id": "ICCV3_0401",
+        "label": "服饰配件"
+    },
+    {
+        "id": "ICCV3_0402",
+        "label": "电子产品"
+    },
+    {
+        "id": "ICCV3_0403",
+        "label": "设备租赁"
+    },
+    {
+        "id": "ICCV3_0404",
+        "label": "食品饮料（非酒精）"
+    },
+    {
+        "id": "ICCV3_0405",
+        "label": "家具"
+    },
+    {
+        "id": "ICCV3_0406",
+        "label": "家用电器"
+    },
+    {
+        "id": "ICCV3_0407",
+        "label": "工业机械设备"
+    },
+    {
+        "id": "ICCV3_0408",
+        "label": "木材和木制品（非家具）"
+    },
+    {
+        "id": "ICCV3_0409",
+        "label": "医疗设备"
+    },
+    {
+        "id": "ICCV3_0410",
+        "label": "纸制品"
+    },
+    {
+        "id": "ICCV3_0411",
+        "label": "药品"
+    },
+    {
+        "id": "ICCV3_0412",
+        "label": "橡胶和塑料制品"
+    },
+    {
+        "id": "ICCV3_0413",
+        "label": "烟草和大麻相关产品"
+    },
+    {
+        "id": "ICCV3_0414",
+        "label": "其他"
+    },
+    {
+        "id": "ICCV3_05",
+        "label": "医疗服务"
+    },
+    {
+        "id": "ICCV3_0500",
+        "label": "诊所"
+    },
+    {
+        "id": "ICCV3_0501",
+        "label": "医院"
+    },
+    {
+        "id": "ICCV3_0502",
+        "label": "心理健康服务"
+    },
+    {
+        "id": "ICCV3_0503",
+        "label": "疗养院和个人护理设施"
+    },
+    {
+        "id": "ICCV3_0504",
+        "label": "兽医服务"
+    },
+    {
+        "id": "ICCV3_0505",
+        "label": "其他"
+    },
+    {
+        "id": "ICCV3_06",
+        "label": "其他"
+    },
+    {
+        "id": "ICCV3_0600",
+        "label": "成人内容和服务"
+    },
+    {
+        "id": "ICCV3_0601",
+        "label": "其他"
+    },
+    {
+        "id": "ICCV3_0602",
+        "label": "补充剂和营养品"
+    },
+    {
+        "id": "ICCV3_0603",
+        "label": "武器弹药"
+    },
+    {
+        "id": "ICCV3_07",
+        "label": "个人护理"
+    },
+    {
+        "id": "ICCV3_0700",
+        "label": "汽车维修和保养"
+    },
+    {
+        "id": "ICCV3_0701",
+        "label": "美容理发"
+    },
+    {
+        "id": "ICCV3_0702",
+        "label": "设备和电子产品维修"
+    },
+    {
+        "id": "ICCV3_0703",
+        "label": "健康保健咨询"
+    },
+    {
+        "id": "ICCV3_0704",
+        "label": "洗衣和清洁服务"
+    },
+    {
+        "id": "ICCV3_0705",
+        "label": "健身设施"
+    },
+    {
+        "id": "ICCV3_0706",
+        "label": "其他"
+    },
+    {
+        "id": "ICCV3_08",
+        "label": "专业化服务"
+    },
+    {
+        "id": "ICCV3_0800",
+        "label": "会计、审计和税务"
+    },
+    {
+        "id": "ICCV3_0801",
+        "label": "行政服务"
+    },
+    {
+        "id": "ICCV3_0802",
+        "label": "艺术与设计"
+    },
+    {
+        "id": "ICCV3_0803",
+        "label": "快递和运输"
+    },
+    {
+        "id": "ICCV3_0804",
+        "label": "政府和公共服务"
+    },
+    {
+        "id": "ICCV3_0805",
+        "label": "人力资源解决方案"
+    },
+    {
+        "id": "ICCV3_0806",
+        "label": "科技咨询"
+    },
+    {
+        "id": "ICCV3_0807",
+        "label": "法律服务"
+    },
+    {
+        "id": "ICCV3_0808",
+        "label": "管理咨询"
+    },
+    {
+        "id": "ICCV3_0809",
+        "label": "市场营销和广告"
+    },
+    {
+        "id": "ICCV3_0810",
+        "label": "摄影"
+    },
+    {
+        "id": "ICCV3_0811",
+        "label": "出版印刷"
+    },
+    {
+        "id": "ICCV3_0812",
+        "label": "仓储配送"
+    },
+    {
+        "id": "ICCV3_0813",
+        "label": "其他"
+    },
+    {
+        "id": "ICCV3_09",
+        "label": "房地产"
+    },
+    {
+        "id": "ICCV3_0900",
+        "label": "建筑和工程服务"
+    },
+    {
+        "id": "ICCV3_0901",
+        "label": "清洁消毒"
+    },
+    {
+        "id": "ICCV3_0902",
+        "label": "建造"
+    },
+    {
+        "id": "ICCV3_0903",
+        "label": "电气工作"
+    },
+    {
+        "id": "ICCV3_0904",
+        "label": "管道、供暖和空调"
+    },
+    {
+        "id": "ICCV3_0905",
+        "label": "房产经理"
+    },
+    {
+        "id": "ICCV3_0906",
+        "label": "特殊贸易承包商"
+    },
+    {
+        "id": "ICCV3_0907",
+        "label": "公用事业"
+    },
+    {
+        "id": "ICCV3_0908",
+        "label": "其他"
+    },
+    {
+        "id": "ICCV3_10",
+        "label": "零售"
+    },
+    {
+        "id": "ICCV3_1000",
+        "label": "成人用品"
+    },
+    {
+        "id": "ICCV3_1001",
+        "label": "汽车零配件"
+    },
+    {
+        "id": "ICCV3_1002",
+        "label": "汽车经销商"
+    },
+    {
+        "id": "ICCV3_1003",
+        "label": "美容和化妆品"
+    },
+    {
+        "id": "ICCV3_1004",
+        "label": "服装配饰"
+    },
+    {
+        "id": "ICCV3_1005",
+        "label": "电子设备"
+    },
+    {
+        "id": "ICCV3_1006",
+        "label": "药店和个人护理"
+    },
+    {
+        "id": "ICCV3_1007",
+        "label": "眼镜和其他光学商品"
+    },
+    {
+        "id": "ICCV3_1008",
+        "label": "花店"
+    },
+    {
+        "id": "ICCV3_1009",
+        "label": "食品饮料"
+    },
+    {
+        "id": "ICCV3_1010",
+        "label": "家具"
+    },
+    {
+        "id": "ICCV3_1011",
+        "label": "园艺"
+    },
+    {
+        "id": "ICCV3_1012",
+        "label": "杂货店"
+    },
+    {
+        "id": "ICCV3_1013",
+        "label": "家用电器"
+    },
+    {
+        "id": "ICCV3_1014",
+        "label": "家庭用品"
+    },
+    {
+        "id": "ICCV3_1015",
+        "label": "珠宝、手表、宝石和贵金属"
+    },
+    {
+        "id": "ICCV3_1016",
+        "label": "医疗设备"
+    },
+    {
+        "id": "ICCV3_1017",
+        "label": "母婴用品"
+    },
+    {
+        "id": "ICCV3_1018",
+        "label": "乐器"
+    },
+    {
+        "id": "ICCV3_1019",
+        "label": "办公和学校用品"
+    },
+    {
+        "id": "ICCV3_1020",
+        "label": "线上市场"
+    },
+    {
+        "id": "ICCV3_1021",
+        "label": "宠物用品"
+    },
+    {
+        "id": "ICCV3_1022",
+        "label": "餐厅酒吧"
+    },
+    {
+        "id": "ICCV3_1023",
+        "label": "运动户外"
+    },
+    {
+        "id": "ICCV3_1024",
+        "label": "烟草和大麻相关产品"
+    },
+    {
+        "id": "ICCV3_1025",
+        "label": "玩具"
+    },
+    {
+        "id": "ICCV3_1026",
+        "label": "电子烟和相关雾化产品"
+    },
+    {
+        "id": "ICCV3_1027",
+        "label": "其他"
+    },
+    {
+        "id": "ICCV3_11",
+        "label": "旅游及住宿"
+    },
+    {
+        "id": "ICCV3_1100",
+        "label": "航空运输"
+    },
+    {
+        "id": "ICCV3_1101",
+        "label": "汽车租赁"
+    },
+    {
+        "id": "ICCV3_1102",
+        "label": "酒店旅馆"
+    },
+    {
+        "id": "ICCV3_1103",
+        "label": "拼车"
+    },
+    {
+        "id": "ICCV3_1104",
+        "label": "出租车和豪华轿车"
+    },
+    {
+        "id": "ICCV3_1105",
+        "label": "旅行社"
+    },
+    {
+        "id": "ICCV3_1106",
+        "label": "水运"
+    },
+    {
+        "id": "ICCV3_1107",
+        "label": "其他"
+    },
+    {
+        "id": "ICCV3_12",
+        "label": "批发"
+    },
+    {
+        "id": "ICCV3_1200",
+        "label": "成人用品"
+    },
+    {
+        "id": "ICCV3_1201",
+        "label": "汽车零配件"
+    },
+    {
+        "id": "ICCV3_1202",
+        "label": "汽车"
+    },
+    {
+        "id": "ICCV3_1203",
+        "label": "美容和化妆品"
+    },
+    {
+        "id": "ICCV3_1204",
+        "label": "服装配饰"
+    },
+    {
+        "id": "ICCV3_1205",
+        "label": "电子设备"
+    },
+    {
+        "id": "ICCV3_1206",
+        "label": "药店和个人护理"
+    },
+    {
+        "id": "ICCV3_1207",
+        "label": "眼镜和其他光学产品"
+    },
+    {
+        "id": "ICCV3_1208",
+        "label": "花店"
+    },
+    {
+        "id": "ICCV3_1209",
+        "label": "食品饮料"
+    },
+    {
+        "id": "ICCV3_1210",
+        "label": "家具"
+    },
+    {
+        "id": "ICCV3_1211",
+        "label": "园艺"
+    },
+    {
+        "id": "ICCV3_1212",
+        "label": "杂货"
+    },
+    {
+        "id": "ICCV3_1213",
+        "label": "家用电器"
+    },
+    {
+        "id": "ICCV3_1214",
+        "label": "家庭用品"
+    },
+    {
+        "id": "ICCV3_1215",
+        "label": "珠宝、手表、宝石和金属"
+    },
+    {
+        "id": "ICCV3_1216",
+        "label": "医疗设备"
+    },
+    {
+        "id": "ICCV3_1217",
+        "label": "母婴用品"
+    },
+    {
+        "id": "ICCV3_1218",
+        "label": "乐器"
+    },
+    {
+        "id": "ICCV3_1219",
+        "label": "办公和学校用品"
+    },
+    {
+        "id": "ICCV3_1220",
+        "label": "宠物用品"
+    },
+    {
+        "id": "ICCV3_1221",
+        "label": "运动户外"
+    },
+    {
+        "id": "ICCV3_1222",
+        "label": "烟草和大麻相关产品"
+    },
+    {
+        "id": "ICCV3_1223",
+        "label": "玩具"
+    },
+    {
+        "id": "ICCV3_1224",
+        "label": "其他"
+    },
+    {
+        "id": "ICCV3_LABEL_YES",
+        "label": "是"
+    },
+    {
+        "id": "ICCV3_LABEL_NO",
+        "label": "否"
+    },
+    {
+        "id": "ICCV3_0003",
+        "label": "游戏"
+    },
+    {
+        "id": "ICCV3_MOST_POPULAR_INDUSTRIES",
+        "label": "ICCV3_0401XX,ICCV3_0808XX,ICCV3_000500,ICCV3_1014XX,ICCV3_1005XX"
+    },
+    {
+        "id": "ICCV3_NO_RESULTS_LABEL",
+        "label": "未找到结果"
+    },
+    {
+        "id": "ICCV3_MOST_POPULAR_LABEL",
+        "label": "热门"
+    },
+    {
+        "id": "ICCV3_1215_ADDITIONAL_QUESTION_LABEL",
+        "label": "您是否销售单价超过一万美元的任何产品？"
+    },
+    {
+        "id": "ICCV3_1015_ADDITIONAL_QUESTION_LABEL",
+        "label": "您是否销售单价超过一万美元的任何产品？"
+    },
+    {
+        "id": "ICCV3_1206_ADDITIONAL_QUESTION_LABEL",
+        "label": "您的公司是否销售处方药？"
+    },
+    {
+        "id": "ICCV3_1006_ADDITIONAL_QUESTION_LABEL",
+        "label": "您的公司是否销售处方药？\n"
+    },
+    {
+        "id": "ICCV3_0005_ADDITIONAL_QUESTION_LABEL",
+        "label": "您的平台提供直播服务吗？"
+    },
+    {
+        "id": "ICCV3_0003_ADDITIONAL_QUESTION_LABEL",
+        "label": "您的产品是否包含可转让的虚拟资产（TVA），例如工具、皮肤、主题等？（该资产无需可兑换现金)？"
+    }
+]

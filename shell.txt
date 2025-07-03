@@ -1,0 +1,80 @@
+Lesson 1.
+1. 用 touch 在 missing 文件夹中新建一个叫 semester 的文件。
+将以下内容一行一行地写入 semester 文件：
+ #!/bin/sh
+ curl --head --silent https://missing.csail.mit.edu
+第一行可能有点棘手， # 在Bash中表示注释，而 ! 即使被双引号（"）包裹也具有特殊的含义。 单引号（'）则不一样，此处利用这一点解决输入问题。
+
+2. 尝试执行这个文件。例如，将该脚本的路径（./semester）输入到您的shell中并回车。如果程序无法执行，请使用 ls 命令来获取信息并理解其不能执行的原因。
+
+3. 使用 chmod 命令改变权限，使 ./semester 能够成功执行，不要使用 sh semester 来执行该程序。
+
+Chmod ugo+x semester = chmod a+x semester
+
+表示将semester文件的所有者u、与拥有者属于同一用户组g、其他以外的o,增加对semester文件的执行权限
+
+r 读 w 写 x 执行
+
+4. 使用 | 和 > ，将 semester 文件输出的最后更改日期信息，写入主目录下的 last-modified.txt 的文件中
+Linux 系统： ./semester | grep --ignore-case last-modified | cut --delimiter=':' -f2 > last-modified.txt
+
+MacOS系统：./semester | grep --ignore-case last-modified | cut -d ':' -f2 > last-modified.txt
+
+Lesson 2.
+1. 阅读 man ls ，然后使用ls 命令进行如下操作：
+
+所有文件（包括隐藏文件）
+文件打印以人类可以理解的格式输出 (例如，使用454M 而不是 454279954)
+文件以最近访问顺序排序
+以彩色文本显示输出结果
+
+Ls -A -l -h -t -u 
+
+2.编写两个bash函数 marco 和 polo 执行下面的操作。 每当你执行 marco 时，当前的工作目录应当以某种形式保存，当执行 polo 时，无论现在处在什么目录下，都应当 cd 回到当时执行 marco 的目录。 为了方便debug，你可以把代码写在单独的文件 marco.sh 中，并通过 source marco.sh命令，（重新）加载函数。
+
+#!/bin/bash
+foo=""
+marco(){
+   foo=$(pwd)
+}
+
+polo(){
+   cd "$foo"
+}
+
+3. 假设您有一个命令，它很少出错。因此为了在出错时能够对其进行调试，需要花费大量的时间重现错误并捕获输出。 编写一段bash脚本，运行如下的脚本直到它出错，将它的标准输出和标准错误流记录到文件，并在最后输出所有内容。 加分项：报告脚本在失败前共运行了多少次。
+
+ #!/usr/bin/env bash
+
+ n=$(( RANDOM % 100 ))
+
+ if [[ n -eq 42 ]]; then
+    echo "Something went wrong"
+    >&2 echo "The error was using magic numbers"
+    exit 1
+ fi
+
+ echo "Everything went according to plan"
+
+
+#!/bin/bash
+success_cnt=0
+while true
+do 
+    ./demo.sh >> log.txt 2>&1
+    if [[ $? -ne 0 ]];
+    then
+	echo "failed after $success_cnt times"
+	break
+    fi
+    ((success_cnt++))
+done
+
+
+注意： 0-标准输入流 1-标准输出流 2-标准错误流 > 重定向符 >> 重定向+追加
+demo里面的 >&2 指的是将标准输出stdout重定向到标准错误stderr
+所以在解决方案中的 ./demo.sh >> log.txt 2>&1 表示首先将标准输出指向文件log.txt并追加,然后将标准错误也指向标准输出，所以demo.sh的标准输出和标准错误均会被写入log.txt文件
+
+
+4.
+ 

@@ -1,0 +1,723 @@
+{
+    "ICCV3_00": {
+        "name": "Digital and tech",
+        "children": [
+            {
+                "code": "ICCV3_0000",
+                "name": "Crypto and blockchain related products and services"
+            },
+            {
+                "code": "ICCV3_0001",
+                "name": "Digital content (e.g., Books, music, movies)"
+            },
+            {
+                "code": "ICCV3_0002",
+                "name": "Financial data and research"
+            },
+            {
+                "code": "ICCV3_0003",
+                "name": "Games"
+            },
+            {
+                "code": "ICCV3_0003",
+                "name": "Games"
+            },
+            {
+                "code": "ICCV3_0004",
+                "name": "Matchmaking and dating"
+            },
+            {
+                "code": "ICCV3_0005",
+                "name": "Social media"
+            },
+            {
+                "code": "ICCV3_0005",
+                "name": "Social media"
+            },
+            {
+                "code": "ICCV3_0006",
+                "name": "Software development"
+            },
+            {
+                "code": "ICCV3_0007",
+                "name": "Others"
+            }
+        ]
+    },
+    "ICCV3_01": {
+        "name": "Education",
+        "children": [
+            {
+                "code": "ICCV3_0100",
+                "name": "Child care"
+            },
+            {
+                "code": "ICCV3_0101",
+                "name": "Colleges and universities"
+            },
+            {
+                "code": "ICCV3_0102",
+                "name": "Elementary and secondary schools"
+            },
+            {
+                "code": "ICCV3_0103",
+                "name": "Online education platforms"
+            },
+            {
+                "code": "ICCV3_0104",
+                "name": "Vocational schools and trade schools"
+            },
+            {
+                "code": "ICCV3_0105",
+                "name": "Others"
+            }
+        ]
+    },
+    "ICCV3_02": {
+        "name": "Entertainment, recreation and social",
+        "children": [
+            {
+                "code": "ICCV3_0200",
+                "name": "Bands, orchestras, actors, and other entertainers"
+            },
+            {
+                "code": "ICCV3_0201",
+                "name": "Country, sports and membership clubs"
+            },
+            {
+                "code": "ICCV3_0202",
+                "name": "Event ticketing"
+            },
+            {
+                "code": "ICCV3_0203",
+                "name": "Gambling"
+            },
+            {
+                "code": "ICCV3_0204",
+                "name": "Lotteries"
+            },
+            {
+                "code": "ICCV3_0205",
+                "name": "Movie theaters"
+            },
+            {
+                "code": "ICCV3_0206",
+                "name": "NGOs, charities and social organizations"
+            },
+            {
+                "code": "ICCV3_0207",
+                "name": "Political organizations"
+            },
+            {
+                "code": "ICCV3_0208",
+                "name": "Professional sport teams and leagues"
+            },
+            {
+                "code": "ICCV3_0209",
+                "name": "Recreational camps"
+            },
+            {
+                "code": "ICCV3_0210",
+                "name": "Religious organizations"
+            },
+            {
+                "code": "ICCV3_0211",
+                "name": "Tourist attractions"
+            },
+            {
+                "code": "ICCV3_0212",
+                "name": "Others"
+            }
+        ]
+    },
+    "ICCV3_03": {
+        "name": "Financial services",
+        "children": [
+            {
+                "code": "ICCV3_0300",
+                "name": "Digital wallet"
+            },
+            {
+                "code": "ICCV3_0301",
+                "name": "Insurance"
+            },
+            {
+                "code": "ICCV3_0302",
+                "name": "Investment"
+            },
+            {
+                "code": "ICCV3_0303",
+                "name": "Loans or lending"
+            },
+            {
+                "code": "ICCV3_0304",
+                "name": "Money services or transmission"
+            },
+            {
+                "code": "ICCV3_0305",
+                "name": "Mortgage "
+            },
+            {
+                "code": "ICCV3_0306",
+                "name": "Security brokers and dealers"
+            },
+            {
+                "code": "ICCV3_0307",
+                "name": "Others"
+            }
+        ]
+    },
+    "ICCV3_04": {
+        "name": "Manufacturing",
+        "children": [
+            {
+                "code": "ICCV3_0400",
+                "name": "Alcohol production"
+            },
+            {
+                "code": "ICCV3_0401",
+                "name": "Clothing and accessories"
+            },
+            {
+                "code": "ICCV3_0402",
+                "name": "Computer and electronics"
+            },
+            {
+                "code": "ICCV3_0403",
+                "name": "Equipment rental and leasing"
+            },
+            {
+                "code": "ICCV3_0404",
+                "name": "Food and beverage (non-alcoholic)"
+            },
+            {
+                "code": "ICCV3_0405",
+                "name": "Furniture"
+            },
+            {
+                "code": "ICCV3_0406",
+                "name": "Home appliances"
+            },
+            {
+                "code": "ICCV3_0407",
+                "name": "Industrial machinery and equipment"
+            },
+            {
+                "code": "ICCV3_0408",
+                "name": "Lumber and wood products (except furniture)"
+            },
+            {
+                "code": "ICCV3_0409",
+                "name": "Medical devices"
+            },
+            {
+                "code": "ICCV3_0410",
+                "name": "Paper products"
+            },
+            {
+                "code": "ICCV3_0411",
+                "name": "Pharmaceuticals"
+            },
+            {
+                "code": "ICCV3_0412",
+                "name": "Rubber and plastics products"
+            },
+            {
+                "code": "ICCV3_0413",
+                "name": "Tobacco and marijuana related products"
+            },
+            {
+                "code": "ICCV3_0414",
+                "name": "Others"
+            },
+            {
+                "code": "ICCV3_0415",
+                "name": "Supplements and nutraceuticals"
+            },
+            {
+                "code": "ICCV3_0415",
+                "name": "Supplements and nutraceuticals"
+            }
+        ]
+    },
+    "ICCV3_05": {
+        "name": "Medical services",
+        "children": [
+            {
+                "code": "ICCV3_0500",
+                "name": "Clinics"
+            },
+            {
+                "code": "ICCV3_0501",
+                "name": "Hospitals"
+            },
+            {
+                "code": "ICCV3_0502",
+                "name": "Mental health services"
+            },
+            {
+                "code": "ICCV3_0503",
+                "name": "Nursing home and personal care facilities"
+            },
+            {
+                "code": "ICCV3_0504",
+                "name": "Veterinary services"
+            },
+            {
+                "code": "ICCV3_0505",
+                "name": "Others"
+            }
+        ]
+    },
+    "ICCV3_07": {
+        "name": "Personal services",
+        "children": [
+            {
+                "code": "ICCV3_0700",
+                "name": "Automotive repair and maintanence"
+            },
+            {
+                "code": "ICCV3_0701",
+                "name": "Beauty salons and barbers"
+            },
+            {
+                "code": "ICCV3_0702",
+                "name": "Devices and electronics repair"
+            },
+            {
+                "code": "ICCV3_0703",
+                "name": "Health and wellness counselling"
+            },
+            {
+                "code": "ICCV3_0704",
+                "name": "Laundry and cleaning services"
+            },
+            {
+                "code": "ICCV3_0705",
+                "name": "Physical fitness facilities"
+            },
+            {
+                "code": "ICCV3_0706",
+                "name": "Others"
+            }
+        ]
+    },
+    "ICCV3_08": {
+        "name": "Professional services",
+        "children": [
+            {
+                "code": "ICCV3_0800",
+                "name": "Accounting, auditing and tax"
+            },
+            {
+                "code": "ICCV3_0801",
+                "name": "Administrative services"
+            },
+            {
+                "code": "ICCV3_0802",
+                "name": "Art and design"
+            },
+            {
+                "code": "ICCV3_0803",
+                "name": "Courier and shipping"
+            },
+            {
+                "code": "ICCV3_0804",
+                "name": "Government and public services"
+            },
+            {
+                "code": "ICCV3_0805",
+                "name": "Human resources solutions"
+            },
+            {
+                "code": "ICCV3_0806",
+                "name": "IT consulting"
+            },
+            {
+                "code": "ICCV3_0807",
+                "name": "Legal services"
+            },
+            {
+                "code": "ICCV3_0808",
+                "name": "Management consulting"
+            },
+            {
+                "code": "ICCV3_0809",
+                "name": "Marketing and advertising"
+            },
+            {
+                "code": "ICCV3_0810",
+                "name": "Photography"
+            },
+            {
+                "code": "ICCV3_0811",
+                "name": "Publishing and printing"
+            },
+            {
+                "code": "ICCV3_0812",
+                "name": "Warehousing and distribution"
+            },
+            {
+                "code": "ICCV3_0813",
+                "name": "Others"
+            }
+        ]
+    },
+    "ICCV3_09": {
+        "name": "Property and real estate",
+        "children": [
+            {
+                "code": "ICCV3_0900",
+                "name": "Architectural and engineering services"
+            },
+            {
+                "code": "ICCV3_0901",
+                "name": "Clearning and sanitization"
+            },
+            {
+                "code": "ICCV3_0902",
+                "name": "Construction"
+            },
+            {
+                "code": "ICCV3_0903",
+                "name": "Electrical work"
+            },
+            {
+                "code": "ICCV3_0904",
+                "name": "Plumbing, heating and air-conditioning"
+            },
+            {
+                "code": "ICCV3_0905",
+                "name": "Real estate agents and managers"
+            },
+            {
+                "code": "ICCV3_0906",
+                "name": "Special trade contractors"
+            },
+            {
+                "code": "ICCV3_0907",
+                "name": "Utilities"
+            },
+            {
+                "code": "ICCV3_0908",
+                "name": "Others"
+            }
+        ]
+    },
+    "ICCV3_10": {
+        "name": "Retail",
+        "children": [
+            {
+                "code": "ICCV3_1000",
+                "name": "Adult products"
+            },
+            {
+                "code": "ICCV3_1001",
+                "name": "Auto parts and accessories"
+            },
+            {
+                "code": "ICCV3_1002",
+                "name": "Automotive dealers"
+            },
+            {
+                "code": "ICCV3_1003",
+                "name": "Beauty and cosmetics"
+            },
+            {
+                "code": "ICCV3_1004",
+                "name": "Clothing and accessories"
+            },
+            {
+                "code": "ICCV3_1005",
+                "name": "Devices and electronics"
+            },
+            {
+                "code": "ICCV3_1006",
+                "name": "Drugstore and personal care"
+            },
+            {
+                "code": "ICCV3_1006",
+                "name": "Drugstore and personal care"
+            },
+            {
+                "code": "ICCV3_1007",
+                "name": "Eyeglasses and other optical goods"
+            },
+            {
+                "code": "ICCV3_1008",
+                "name": "Florists"
+            },
+            {
+                "code": "ICCV3_1009",
+                "name": "Food and beverage"
+            },
+            {
+                "code": "ICCV3_1010",
+                "name": "Furniture"
+            },
+            {
+                "code": "ICCV3_1011",
+                "name": "Gardening"
+            },
+            {
+                "code": "ICCV3_1012",
+                "name": "Grocery stores"
+            },
+            {
+                "code": "ICCV3_1013",
+                "name": "Home appliances"
+            },
+            {
+                "code": "ICCV3_1014",
+                "name": "Household goods"
+            },
+            {
+                "code": "ICCV3_1015",
+                "name": "Jewelry, watches, precious stones and metals"
+            },
+            {
+                "code": "ICCV3_1015",
+                "name": "Jewelry, watches, precious stones and metals"
+            },
+            {
+                "code": "ICCV3_1016",
+                "name": "Medical devices"
+            },
+            {
+                "code": "ICCV3_1017",
+                "name": "Mother and baby goods"
+            },
+            {
+                "code": "ICCV3_1018",
+                "name": "Musical instruments"
+            },
+            {
+                "code": "ICCV3_1019",
+                "name": "Office and school supplies"
+            },
+            {
+                "code": "ICCV3_1020",
+                "name": "Online marketplaces"
+            },
+            {
+                "code": "ICCV3_1021",
+                "name": "Pet supplies"
+            },
+            {
+                "code": "ICCV3_1022",
+                "name": "Restaurants and bars"
+            },
+            {
+                "code": "ICCV3_1023",
+                "name": "Sports and outdoor"
+            },
+            {
+                "code": "ICCV3_1024",
+                "name": "Tobacco and marijuana related products"
+            },
+            {
+                "code": "ICCV3_1025",
+                "name": "Toys and hobbies"
+            },
+            {
+                "code": "ICCV3_1026",
+                "name": "Vapes, e-cigarettes, e-juice and related products"
+            },
+            {
+                "code": "ICCV3_1027",
+                "name": "Others"
+            },
+            {
+                "code": "ICCV3_1028",
+                "name": "Supplements and nutraceuticals"
+            },
+            {
+                "code": "ICCV3_1028",
+                "name": "Supplements and nutraceuticals"
+            }
+        ]
+    },
+    "ICCV3_11": {
+        "name": "Travel and lodging",
+        "children": [
+            {
+                "code": "ICCV3_1100",
+                "name": "Air transportation"
+            },
+            {
+                "code": "ICCV3_1101",
+                "name": "Car rental"
+            },
+            {
+                "code": "ICCV3_1102",
+                "name": "Hotels, inns, and motels"
+            },
+            {
+                "code": "ICCV3_1103",
+                "name": "Ridesharing"
+            },
+            {
+                "code": "ICCV3_1104",
+                "name": "Taxis and limos"
+            },
+            {
+                "code": "ICCV3_1105",
+                "name": "Travel agency "
+            },
+            {
+                "code": "ICCV3_1106",
+                "name": "Water transportation"
+            },
+            {
+                "code": "ICCV3_1107",
+                "name": "Others"
+            },
+            {
+                "code": "ICCV3_1108",
+                "name": "Boat hire and yacht charter"
+            },
+            {
+                "code": "ICCV3_1109",
+                "name": "Motor homes, caravans, campers & recreational vehicle hire"
+            }
+        ]
+    },
+    "ICCV3_12": {
+        "name": "Wholesale",
+        "children": [
+            {
+                "code": "ICCV3_1200",
+                "name": "Adult products"
+            },
+            {
+                "code": "ICCV3_1201",
+                "name": "Auto parts and accessories"
+            },
+            {
+                "code": "ICCV3_1202",
+                "name": "Automotive"
+            },
+            {
+                "code": "ICCV3_1203",
+                "name": "Beauty and cosmetics"
+            },
+            {
+                "code": "ICCV3_1204",
+                "name": "Clothing and accessories"
+            },
+            {
+                "code": "ICCV3_1205",
+                "name": "Devices and electronics"
+            },
+            {
+                "code": "ICCV3_1206",
+                "name": "Drugstore and personal care"
+            },
+            {
+                "code": "ICCV3_1206",
+                "name": "Drugstore and personal care"
+            },
+            {
+                "code": "ICCV3_1207",
+                "name": "Eyeglasses and other optical goods"
+            },
+            {
+                "code": "ICCV3_1208",
+                "name": "Florists"
+            },
+            {
+                "code": "ICCV3_1209",
+                "name": "Food and beverage"
+            },
+            {
+                "code": "ICCV3_1210",
+                "name": "Furniture"
+            },
+            {
+                "code": "ICCV3_1211",
+                "name": "Gardening"
+            },
+            {
+                "code": "ICCV3_1212",
+                "name": "Groceries"
+            },
+            {
+                "code": "ICCV3_1213",
+                "name": "Home appliances"
+            },
+            {
+                "code": "ICCV3_1214",
+                "name": "Household goods"
+            },
+            {
+                "code": "ICCV3_1215",
+                "name": "Jewelry, watches, precious stones and metals"
+            },
+            {
+                "code": "ICCV3_1215",
+                "name": "Jewelry, watches, precious stones and metals"
+            },
+            {
+                "code": "ICCV3_1216",
+                "name": "Medical devices"
+            },
+            {
+                "code": "ICCV3_1217",
+                "name": "Mother and baby goods"
+            },
+            {
+                "code": "ICCV3_1218",
+                "name": "Musical instruments"
+            },
+            {
+                "code": "ICCV3_1219",
+                "name": "Office and school supplies"
+            },
+            {
+                "code": "ICCV3_1220",
+                "name": "Pet supplies"
+            },
+            {
+                "code": "ICCV3_1221",
+                "name": "Sports and outdoor"
+            },
+            {
+                "code": "ICCV3_1222",
+                "name": "Tobacco and marijuana related products"
+            },
+            {
+                "code": "ICCV3_1223",
+                "name": "Toys and hobbies"
+            },
+            {
+                "code": "ICCV3_1224",
+                "name": "Others"
+            },
+            {
+                "code": "ICCV3_1225",
+                "name": "Supplements and nutraceuticals"
+            },
+            {
+                "code": "ICCV3_1225",
+                "name": "Supplements and nutraceuticals"
+            }
+        ]
+    },
+    "ICCV3_06": {
+        "name": "Others",
+        "children": [
+            {
+                "code": "ICCV3_0600",
+                "name": "Adult content and services"
+            },
+            {
+                "code": "ICCV3_0601",
+                "name": "Others"
+            },
+            {
+                "code": "ICCV3_0603",
+                "name": "Weapons and munitions"
+            }
+        ]
+    }
+}
